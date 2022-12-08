@@ -14,10 +14,7 @@
         <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css" />
         <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css" />
         <!-- Para podermos usar o Bootstrap  -->
-        <link href="css/bootstrap.css" rel="stylesheet" />
-        <!-- Core theme CSS (includes Bootstrap)-->
-        <link href="css/styles.css" rel="stylesheet" /> <!--Usa este stylesheet-->
-
+        @vite(["resources/css/bootstrap.css", "resources/css/styles.css"])
     </head>
     <body id="page-top">
         <!-- Navigation-->

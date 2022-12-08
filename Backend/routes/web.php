@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Report_Controller;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -17,3 +18,5 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('pages.mainpage');
 });
+
+Route::get('/report/create', [Report_Controller::class, 'store'])->name("report-create");

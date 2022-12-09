@@ -3,9 +3,9 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use app\Models\Report;
+use App\Models\Report;
 
-class Report_Controller extends Controller
+class ReportController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -24,7 +24,7 @@ class Report_Controller extends Controller
      */
     public function create()
     {
-        //
+        return view('pages.createReport');
     }
 
     /**
@@ -35,7 +35,7 @@ class Report_Controller extends Controller
      */
     public function store(Request $request)
     {
-        $name=$request["fullname"];
+        $name= $request["fullname"];
         $email=$request["email"];
         $phone=$request["phone"];
         $description=$request["message"];
@@ -45,7 +45,7 @@ class Report_Controller extends Controller
         $reports->phone_report = $phone;
         $reports->description = $description;
         $reports->save();
-        return redirect('/report/create')->with('mensagem', 'Reporte criado');
+        return redirect('/createReport/create')->with('mensagem','Reporte criado');
     }
 
     /**

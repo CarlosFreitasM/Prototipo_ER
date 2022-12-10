@@ -13,12 +13,9 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('reports', function (Blueprint $table) {
+        Schema::create('tags', function (Blueprint $table) {
             $table->id();
-            $table->string("fullname_cliente", 100);
-            $table->string("email_report", 100);
-            $table->string("phone_report", 100);
-            $table->text("description");
+            $table->string('tagDescription', 100);
             $table->timestamps();
         });
     }
@@ -30,6 +27,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('reports');
+        Schema::dropIfExists('tags');
     }
 };

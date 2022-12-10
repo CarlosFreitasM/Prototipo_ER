@@ -68,7 +68,7 @@ const facebookBtn = document.querySelector(".facebook-btn");
 const twitterBtn = document.querySelector(".twitter-btn");
 
                 
-const pageUrl = location.href; //Para ter o URF da página atual
+const pageUrl = window.location.href; //Para ter o URF da página atual
 const pageUrlFace = "www.youtube.com/watch?v=dQw4w9WgXcQ"; //URL teste válido para o Facebook
 const message = " Educação, Prevenção e Ajuda sobre Burlas Online. Veja como não ser burlado outra vez! ";
 
@@ -80,10 +80,10 @@ const twitterApi = `https://twitter.com/intent/tweet?text=${pageUrl} ${message}`
 
 twitterBtn.addEventListener('click',()=>{
     console.log("twitter btn clicked")
-    window.open(url = twitterApi, target='blank')
+    window.open(twitterApi, 'blank')
 });
 
 facebookBtn.addEventListener('click',()=>{
-    console.log("tfacebook btn clicked")
-    window.open(url = facebookApi, target='blank')
+    console.log("facebook btn clicked")
+    window.open(facebookApi, 'blank')
 });

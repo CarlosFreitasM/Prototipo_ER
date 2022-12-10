@@ -14,8 +14,8 @@ class ReportController extends Controller
      */
     public function index()
     {
-        /*$reports = Report::all();
-        return view('tecReports', ['tecReports'=>$reports]);*/
+        $reports = Report::all();
+        return view('pages.dashboardTecnico', ['tecReports'=>$reports]);
     }
 
     /**
@@ -68,7 +68,8 @@ class ReportController extends Controller
      */
     public function edit($id)
     {
-        //
+        $reports = Report::findOrFail($id);
+        
     }
 
     /**

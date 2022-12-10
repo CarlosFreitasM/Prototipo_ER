@@ -19,6 +19,7 @@ Route::get('/tec', function () {
     return view('layout.dashboardTecn');
 });
 
+
 Route::get('/ent', function () {
     return view('layout.dashboardEntity');
 });
@@ -33,3 +34,7 @@ Route::get('/createReport', function () {
 
 Route::get('/createReport/create', [ReportController::class, 'create']);
 Route::post('/createReport', [ReportController::class, 'store']);
+
+//Route::get('/tec', [ReportController::class,'index'])->name('tecReports');
+
+

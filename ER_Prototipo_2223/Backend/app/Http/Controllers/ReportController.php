@@ -14,7 +14,8 @@ class ReportController extends Controller
      */
     public function index()
     {
-        //
+        /*$reports = Report::all();
+        return view('tecReports', ['tecReports'=>$reports]);*/
     }
 
     /**
@@ -56,7 +57,7 @@ class ReportController extends Controller
      */
     public function show($id)
     {
-        //
+     
     }
 
     /**

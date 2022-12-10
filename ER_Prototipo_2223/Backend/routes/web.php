@@ -15,6 +15,14 @@ use Illuminate\Support\Facades\Route;
 */
 
 
+Route::get('/tec', function () {
+    return view('layout.dashboardTecn');
+});
+
+Route::get('/ent', function () {
+    return view('layout.dashboardEntity');
+});
+
 Route::get('/', function () {
     return view('layout.layouts');
 });

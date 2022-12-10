@@ -34,7 +34,7 @@
                     <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="#cena1">Cena1</a></li>
                     <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="#cena2">Cena2</a></li>
                     <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="#cena3">Cena3</a></li>
-                    <a class="nav-link py-3 px-0 px-lg-3 rounded" href="./index.html"><i class="fa-solid fa-arrow-rotate-left mx-1"></i>Voltar à página inicial</a></li>
+                    <a class="nav-link py-3 px-0 px-lg-3 rounded" href="/"><i class="fa-solid fa-arrow-rotate-left mx-1"></i>Voltar à página inicial</a></li>
                 </ul>
             </div>
         </div>

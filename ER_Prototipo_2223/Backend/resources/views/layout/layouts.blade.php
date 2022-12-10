@@ -34,6 +34,17 @@
                     </ul>
                 </div>
             </div>
+            <!-- Login -->
+            <div class="portfolio-item mx-auto" data-bs-toggle="modal" data-bs-target="#login">
+                    <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
+                        <div class="portfolio-item-caption-content text-center text-white"> 
+                            <a class="nav-link py-3 px-0 px-lg-3 rounded" href="#"  aria-expanded="false">
+                            <i class="fa-solid fa-user"></i>
+                            Login
+                        </a></div>
+                    </div>        
+                </div>
+            </div> <!-- div container-->
         </nav>
         <!-- Masthead-->
         <header class="masthead bg-primary text-white text-center">
@@ -405,6 +416,64 @@
                                     <button class="btn btn-primary" data-bs-dismiss="modal">
                                         <i class="fas fa-xmark fa-fw"></i>
                                         Close Window
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- FAzer login - Rework do Portfolio Modal -->
+        <div class="portfolio-modal modal fade" id="login" tabindex="-1" aria-labelledby="login" aria-hidden="true">
+            <div class="modal-dialog modal-xl">
+                <div class="modal-content">
+                    <div class="modal-header border-0"><button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button></div>
+                    <div class="modal-body text-center pb-5">
+                        <div class="container">
+                            <div class="row justify-content-center">
+                                <div class="col-lg-8">
+                                    <!-- Portfolio Modal - Title-->
+                                    <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0">Login</h2>
+                                    <!-- Icon Divider-->
+                                    <div class="divider-custom">
+                                        <div class="divider-custom-line"></div>
+                                        <div class="divider-custom-icon"><i class="fas fa-user"></i></div>
+                                        <div class="divider-custom-line"></div>
+                                    </div>
+                                    <!-- FORM DO LOGIN-->
+                                    <div class="container">
+                                        <p>
+                                            Login não funcional!
+                                        </p>
+                                        <label for="username"><b>Username</b></label>
+                                        <input type="text" placeholder="Enter Username" name="username" required>
+                                
+                                        <label for="password"><b>Password</b></label>
+                                        <input type="password" placeholder="Enter Password" name="password" required>
+                                
+                                        <button type="submit">Login</button>
+                                        <label>
+                                            <input type="checkbox" checked="checked" name="remember"> Remember me
+                                        </label>
+                                    </div>
+                                    <!-- Fim do form do Login -->
+                                    <div class="divider-custom">
+                                        <div class="divider-custom-line"></div>
+                                        <div class="divider-custom-line"></div>
+                                        <div class="divider-custom-line"></div>
+                                    </div>
+                                    <!-- Links para as outras páginas-->
+                                    <h3>Simulação de login:</h3>
+                                    <a href="/tec">simular login como técnico</a>
+                                    <br>
+                                    <a href="/ent">simular login como entidade competente</a>
+                                    <br>
+                                    <br>
+                                    
+                                    <button class="btn btn-primary" data-bs-dismiss="modal">
+                                        <i class="fas fa-xmark fa-fw"></i>
+                                        Fechar
                                     </button>
                                 </div>
                             </div>

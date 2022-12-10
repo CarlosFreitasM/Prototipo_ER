@@ -44,7 +44,7 @@
             <!-- Masthead Avatar Image-->
             <img class="masthead-avatar mb-5" src="assets/img/avataaars.svg" alt="..." />
             <!-- Masthead Heading-->
-            <h1 class="masthead-heading text-uppercase mb-0"> Bem Vindo XXXX </h1>
+            <h1 class="masthead-heading text-uppercase mb-0"> Bem Vindo {user.name}</h1>
             <!-- Icon Divider-->
             <div class="divider-custom divider-light">
                 <div class="divider-custom-line"></div>
@@ -149,6 +149,43 @@
                                 <img class="img-fluid rounded mb-5" src="assets/img/burlas/atualizarEstado.png" width="300" height="300" alt="..." />
                                 <!-- Portfolio Modal - Text-->
                                 <p class="mb-4">Atualize o Estado de Burla </p>
+                                <table class="table table-dark table-striped">
+                                    <thead>
+                                      <tr>
+                                        <th scope="col">#</th>
+                                        <th scope="col">Nome</th>
+                                        <th scope="col">Tag</th>
+                                        <th scope="col">Estado</th>
+                                      </tr>
+                                    </thead>
+                                    <tbody>
+                                      <tr>
+                                        <th scope="row">1</th>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                      </tr>
+                                      <tr>
+                                        <th scope="row">2</th>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                      </tr>
+                                      <tr>
+                                        <th scope="row">3</th>
+                                        <td colspan="2"></td>
+                                        <td></td>
+                                      </tr>
+                                    </tbody>
+                                </table>
+
+                                    <div class="btn-group" role="group" aria-label="Basic mixed styles example">
+                                        <button type="button" class="btn btn-danger">Apagar</button>
+                                        <button type="button" class="btn btn-warning">Editar</button>
+                                         <button type="button" class="btn btn-success">Atualizar</button>
+                                    </div>
+                                    <div> <br> </div>
+                                    <div>    
                                 <button class="btn btn-primary" data-bs-dismiss="modal">
                                     <i class="fas fa-xmark fa-fw"></i>
                                     Fechar
@@ -182,6 +219,43 @@
                                 <img class="img-fluid rounded mb-5" src="assets/img/burlas/contactar.png" width="300" height="300" alt="..." />
                                 <!-- Portfolio Modal - Text-->
                                 <p class="mb-4">Selecione o cliente que pretende contactar</p>
+                                <table class="table table-dark table-striped">
+                                    <thead>
+                                      <tr>
+                                        <th scope="col">#</th>
+                                        <th scope="col">Nome</th>
+                                        <th scope="col">Tag</th>
+                                        <th scope="col">Contacto</th>
+                                      </tr>
+                                    </thead>
+                                    <tbody>
+                                      <tr>
+                                        <th scope="row">1</th>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                      </tr>
+                                      <tr>
+                                        <th scope="row">2</th>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                      </tr>
+                                      <tr>
+                                        <th scope="row">3</th>
+                                        <td colspan="2"></td>
+                                        <td></td>
+                                      </tr>
+                                    </tbody>
+                                </table>
+
+                                    <div class="btn-group" role="group" aria-label="Basic mixed styles example">
+                                        <button type="button" class="btn btn-danger">Apagar</button>
+                                        <button type="button" class="btn btn-warning">Editar</button>
+                                         <button type="button" class="btn btn-success">Contactar</button>
+                                    </div>
+                                    <div> <br> </div>
+                                    <div>    
                                 <button class="btn btn-primary" data-bs-dismiss="modal">
                                     <i class="fas fa-xmark fa-fw"></i>
                                     Fechar
@@ -215,6 +289,43 @@
                                 <img class="img-fluid rounded mb-5" src="assets/img/burlas/lista.png" width="300" height="300" alt="..." />
                                 <!-- Portfolio Modal - Text-->
                                 <p class="mb-4">Lista de Burlas Ativas</p>
+                                <table class="table table-dark table-striped">
+                                    <thead>
+                                      <tr>
+                                        <th scope="col">#</th>
+                                        <th scope="col">Nome</th>
+                                        <th scope="col">Tag</th>
+                                        <th scope="col">Data de Adição</th>
+                                      </tr>
+                                    </thead>
+                                    <tbody>
+                                      <tr>
+                                        <th scope="row">1</th>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                      </tr>
+                                      <tr>
+                                        <th scope="row">2</th>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                      </tr>
+                                      <tr>
+                                        <th scope="row">3</th>
+                                        <td colspan="2"></td>
+                                        <td></td>
+                                      </tr>
+                                    </tbody>
+                                </table>
+
+                                    <div class="btn-group" role="group" aria-label="Basic mixed styles example">
+                                        <button type="button" class="btn btn-danger">Apagar</button>
+                                        <button type="button" class="btn btn-warning">Editar</button>
+                                         <button type="button" class="btn btn-success">Guardar</button>
+                                    </div>
+                                    <div> <br> </div>
+                                    <div>    
                                 <button class="btn btn-primary" data-bs-dismiss="modal">
                                     <i class="fas fa-xmark fa-fw"></i>
                                     Fechar

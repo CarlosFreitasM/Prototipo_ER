@@ -43,7 +43,7 @@ class UserController extends Controller
         $reports->email_report = $email;
         $reports->phone_report = $phone;
         $reports->save();
-        return redirect('/createUser')->with('mensagem','User criado');
+        return redirect('/createUser/create')->with('mensagem','Reporte criado');
     }
 
     /**

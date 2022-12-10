@@ -19,13 +19,9 @@ Route::get('/', function () {
     return view('pages.mainpage');
 });
 
-Route::get('/createReport/create', function () {
+Route::get('/createReport', function () {
     return view('pages.createReport');
 });
 
 Route::get('/createReport/create', [ReportController::class, 'create']);
 Route::post('/createReport', [ReportController::class, 'store']);
-
-Auth::routes();
-
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

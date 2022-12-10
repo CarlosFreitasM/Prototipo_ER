@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('layout.layouts')
 
 
 <h1>Envio de burla</h1>

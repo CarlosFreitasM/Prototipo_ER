@@ -80,10 +80,10 @@ const twitterApi = `https://twitter.com/intent/tweet?text=${pageUrl} ${message}`
 
 twitterBtn.addEventListener('click', () => {
     console.log("twitter btn clicked")
-    window.open(url = twitterApi, target = 'blank')
+    window.open(twitterApi,'blank')
 });
 
 facebookBtn.addEventListener('click', () => {
     console.log("facebook btn clicked")
-    window.open(url = facebookApi, target = 'blank')
+    window.open(facebookApi,'blank')
 });

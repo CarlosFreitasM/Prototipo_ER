@@ -106,7 +106,7 @@
                         <img class="img-fluid" src="assets/img/burlas/erros.png" alt="..." />
             </div>
         </div>
-        
+            </div>
     </div>
     </section>
    <!--Footer -->

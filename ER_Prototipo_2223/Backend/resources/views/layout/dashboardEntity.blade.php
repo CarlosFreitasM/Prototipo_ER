@@ -190,6 +190,8 @@
                                     <i class="fas fa-xmark fa-fw"></i>
                                     Fechar
                                 </button>
+                                    </div>  
+                               
                             </div>
                         </div>
                     </div>
@@ -260,6 +262,7 @@
                                     <i class="fas fa-xmark fa-fw"></i>
                                     Fechar
                                 </button>
+                                    </div>  
                             </div>
                         </div>
                     </div>
@@ -331,6 +334,7 @@
                                     Fechar
                                 </button>
                             </div>
+                               </div>
                         </div>
                     </div>
                 </div>

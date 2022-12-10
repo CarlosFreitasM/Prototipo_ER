@@ -16,7 +16,7 @@ use Illuminate\Support\Facades\Route;
 
 
 Route::get('/', function () {
-    return view('pages.mainpage');
+    return view('layout.layouts');
 });
 
 Route::get('/createReport', function () {

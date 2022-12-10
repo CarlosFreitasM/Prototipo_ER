@@ -45,7 +45,7 @@ class ReportController extends Controller
         $reports->phone_report = $phone;
         $reports->description = $description;
         $reports->save();
-        return redirect('/createReport/create')->with('mensagem','Reporte criado');
+        return redirect('/createReport')->with('mensagem','Reporte criado');
     }
 
     /**

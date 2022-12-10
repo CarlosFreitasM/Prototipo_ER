@@ -16,7 +16,7 @@
     <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css" />
     <!-- Para podermos usar o Bootstrap  -->
     @vite(["resources/css/bootstrap.css", "resources/css/styles.css"])
-
+    
 </head>
 
 <body id="page-top">
@@ -39,8 +39,6 @@
         </div>
     </nav>
 
-    <section class="alguma coia" id="atribuirtags2">
-    </section>
     <header class="masthead bg-primary text-white text-center">
         <div class="container d-flex align-items-center flex-column">
             <!-- Masthead Avatar Image-->
@@ -57,6 +55,7 @@
             <p class="masthead-subheading font-weight-light mb-0">O que é que pretende fazer hoje?</p>
         </div>
     </header>
+
     <section class="page-section portfolio" id="ferramentas">
         <div class="container">
             <!-- Portfolio Section Heading-->
@@ -67,7 +66,8 @@
                 <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
                 <div class="divider-custom-line"></div>
             </div>
-            <!-- Burlas Grid Items-->
+            
+            <!-- Items-->
             <div class="row justify-content-center">
                 <!-- NEW: Burla 1 Phishing | OLD:Portfolio Item 1-->
                 
@@ -129,6 +129,102 @@
             </div>
         </div>
     </footer>
+<!--Pop-Ups-->
+    <div class="portfolio-modal modal fade" id="atribuirTags" tabindex="-1" aria-labelledby="atribuirTags" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content">
+                <div class="modal-header border-0"><button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button></div>
+                <div class="modal-body text-center pb-5">
+                    <div class="container">
+                        <div class="row justify-content-center">
+                            <div class="col-lg-8">
+                                <!-- Portfolio Modal - Title-->
+                                <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0">Atualizar Tags:</h2>
+                                <!-- Icon Divider-->
+                                <div class="divider-custom">
+                                    <div class="divider-custom-line"></div>
+                                    <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
+                                    <div class="divider-custom-line"></div>
+                                </div>
+                                <!-- Portfolio Modal - Image-->
+                                <img class="img-fluid rounded mb-5" src="assets/img/burlas/tags.png" width="300" height="300" alt="..." />
+                                <!-- Portfolio Modal - Text-->
+                                <p class="mb-4">Atribua Tags </p>
+                                <button class="btn btn-primary" data-bs-dismiss="modal">
+                                    <i class="fas fa-xmark fa-fw"></i>
+                                    Fechar
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- NEW: Burla 2 Pharming | OLD: Portfolio Modal 2-->
+    <div class="portfolio-modal modal fade" id="atualizarEntidades" tabindex="-1" aria-labelledby="atualizarEntidades" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content">
+                <div class="modal-header border-0"><button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button></div>
+                <div class="modal-body text-center pb-5">
+                    <div class="container">
+                        <div class="row justify-content-center">
+                            <div class="col-lg-8">
+                                <!-- Portfolio Modal - Title-->
+                                <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0">Atualizar Entidades Competentes:</h2>
+                                <!-- Icon Divider-->
+                                <div class="divider-custom">
+                                    <div class="divider-custom-line"></div>
+                                    <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
+                                    <div class="divider-custom-line"></div>
+                                </div>
+                                <!-- Portfolio Modal - Image-->
+                                <img class="img-fluid rounded mb-5" src="assets/img/burlas/atualizar.png" width="300" height="300" alt="..." />
+                                <!-- Portfolio Modal - Text-->
+                                <p class="mb-4">Atualizar Entidades Competentes</p>
+                                <button class="btn btn-primary" data-bs-dismiss="modal">
+                                    <i class="fas fa-xmark fa-fw"></i>
+                                    Fechar
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--NEW: Burla 3 Spyware |  Portfolio Modal 3-->
+    <div class="portfolio-modal modal fade" id="atualizarBurlas" tabindex="-1" aria-labelledby="atualizarBurlas" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content">
+                <div class="modal-header border-0"><button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button></div>
+                <div class="modal-body text-center pb-5">
+                    <div class="container">
+                        <div class="row justify-content-center">
+                            <div class="col-lg-8">
+                                <!-- Portfolio Modal - Title-->
+                                <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0">Lista de Burlas:</h2>
+                                <!-- Icon Divider-->
+                                <div class="divider-custom">
+                                    <div class="divider-custom-line"></div>
+                                    <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
+                                    <div class="divider-custom-line"></div>
+                                </div>
+                                <!-- Portfolio Modal - Image-->
+                                <img class="img-fluid rounded mb-5" src="assets/img/burlas/burlas.png" width="300" height="300" alt="..." />
+                                <!-- Portfolio Modal - Text-->
+                                <p class="mb-4">Lista de Burlas Ativas</p>
+                                <button class="btn btn-primary" data-bs-dismiss="modal">
+                                    <i class="fas fa-xmark fa-fw"></i>
+                                    Fechar
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <!-- Bootstrap core JS-->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
@@ -136,4 +232,5 @@
     <script src="js/bootstrap.js"></script>
     <!-- Core theme JS-->
     <script src="js/scripts.js"></script>
+
 </body>

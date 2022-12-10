@@ -25,3 +25,7 @@ Route::get('/createReport/create', function () {
 
 Route::get('/createReport/create', [ReportController::class, 'create']);
 Route::post('/createReport', [ReportController::class, 'store']);
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

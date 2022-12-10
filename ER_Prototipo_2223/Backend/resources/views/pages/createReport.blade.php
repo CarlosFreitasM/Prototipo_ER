@@ -1,2 +1,2 @@
-@extends('layout.layouts')
+@extends('layouts.app')
 

@@ -19,7 +19,7 @@ Route::get('/', function () {
     return view('pages.mainpage');
 });
 
-Route::get('/createReport', function () {
+Route::get('/createReport/create', function () {
     return view('pages.createReport');
 });
 

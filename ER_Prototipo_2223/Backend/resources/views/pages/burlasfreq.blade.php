@@ -175,13 +175,9 @@
                             <input class="form-control" type="text" name="email" placeholder="Email" required><br>
                             <input class="form-control" type="text" name="phone" placeholder="Telefone" required><br>
                             <textarea class="form-control" style="height: 10rem" type="text" name="message" placeholder="Descrição da burla" required></textarea><br>
+                            <input class="form-control" type="text" name="tags" placeholder="Tag" required><br>
                             <input class="btn btn-primary btn-xl" type="submit" name="report" value="Reportar"><br>
-                            <select name="tag">
-								<option value="" selected></option>';
-								@foreach()
-									echo'<option value="'.$type_unit['id'].'">'.$type_unit['name'].'</option>';
-								}
-						    </select>
+
                         </form>
                     </div>
                 </div>

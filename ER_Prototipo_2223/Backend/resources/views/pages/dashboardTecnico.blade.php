@@ -180,7 +180,7 @@
                                                 <td>
                                                     <div class="btn-group" role="group" aria-label="Basic mixed styles example">
                                                         <button type="button" class="btn btn-danger">Apagar</button>
-                                                        <button type="button" class="btn btn-warning">Editar</button>
+                                                        <button type="button" class="btn btn-warning" data-tagEdit="{{ $report->id }}">Editar</button>
                                                         <button type="button" class="btn btn-success">Atribuir</button>
                                                     </div>
                                                 </td>

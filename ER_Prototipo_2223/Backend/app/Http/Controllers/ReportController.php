@@ -40,6 +40,7 @@ class ReportController extends Controller
         $email=$request["email"];
         $phone=$request["phone"];
         $description=$request["message"];
+        $tags=$request["tag"];
         $reports=new Report();
         $reports->fullname_cliente = $name;
         $reports->email_report = $email;

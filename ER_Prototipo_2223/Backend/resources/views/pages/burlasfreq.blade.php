@@ -1,6 +1,10 @@
 @extends ('layout.layouts')
 
 
+@section('scripts')
+    
+@endsection
+
 @section('header')
     <!-- Navigation-->
         <nav class="navbar navbar-expand-lg bg-secondary text-uppercase fixed-top" id="mainNav">
@@ -175,7 +179,11 @@
                             <input class="form-control" type="text" name="email" placeholder="Email" required><br>
                             <input class="form-control" type="text" name="phone" placeholder="Telefone" required><br>
                             <textarea class="form-control" style="height: 10rem" type="text" name="message" placeholder="Descrição da burla" required></textarea><br>
-                            <input class="form-control" type="text" name="tags" placeholder="Tag" required><br>
+                            <select class="form-control" id="tagsName"><br>
+                                <option value=""></option>
+                                @foreach($tecTags as $tag)
+                                    <option value="{{ $tag->id }}">{{$tag->tagDescription}}</option>
+                                @endforeach
                             <input class="btn btn-primary btn-xl" type="submit" name="report" value="Reportar"><br>
 
                         </form>

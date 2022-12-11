@@ -14,7 +14,6 @@ class Report extends Model
         'email_report',
         'phone_report',
         'description',
-        'tag',
     ];
 
     public function getTag(){

@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\ReportController;
+use App\Http\Controllers\MainController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -20,20 +21,22 @@ Route::get('/ent', function () {
     return view('pages.dashboardEntidade');
 });
 
-Route::get('/', function () {
-    return view('pages.burlasfreq');
-});
+
 
 Route::get('/createReport', function () {
     return view('pages.createReport');
 });
 
-Route::get('/createReport/create', [ReportController::class, 'create'])->name('createReport');
+
 Route::post('/createReport', [ReportController::class, 'store']);
+
+Route::post('/createReport', [ReportController::class, 'store']);
+
+Route::get('/', [MainController::class,'index'])->name('tecTags');
 
 Route::get('/tec', [ReportController::class,'index'])->name('tecReports');
 
-//Route::get('/tec', [TagController::class,'index'])->name('tecTags');
+
 
 
 

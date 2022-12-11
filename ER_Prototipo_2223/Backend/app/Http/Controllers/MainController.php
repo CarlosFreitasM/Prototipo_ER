@@ -3,10 +3,11 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\Report;
+use App\Models\Tag;
 
-class ReportController extends Controller
+class MainController extends Controller
 {
+
     /**
      * Display a listing of the resource.
      *
@@ -14,10 +15,9 @@ class ReportController extends Controller
      */
     public function index()
     {
-        $reports = Report::all();
-        return view('pages.dashboardTecnico', ['tecReports'=>$reports]);
+        $tags = Tag::all();
+        return view('pages.burlasfreq', ['tecTags' => $tags]);
     }
-
 
     /**
      * Show the form for creating a new resource.
@@ -26,7 +26,7 @@ class ReportController extends Controller
      */
     public function create()
     {
-        return view('pages.createReport');
+        //
     }
 
     /**
@@ -37,17 +37,7 @@ class ReportController extends Controller
      */
     public function store(Request $request)
     {
-        $name= $request["fullname"];
-        $email=$request["email"];
-        $phone=$request["phone"];
-        $description=$request["message"];
-        $reports=new Report();
-        $reports->fullname_cliente = $name;
-        $reports->email_report = $email;
-        $reports->phone_report = $phone;
-        $reports->description = $description;
-        $reports->save();
-        return redirect('/')->with('mensagem','Reporte criado');
+        
     }
 
     /**
@@ -69,7 +59,7 @@ class ReportController extends Controller
      */
     public function edit($id)
     {
-        $reports = Report::findOrFail($id);
+        $reports = Tag::findOrFail($id);
         
     }
 
@@ -95,4 +85,5 @@ class ReportController extends Controller
     {
         //
     }
+    
 }

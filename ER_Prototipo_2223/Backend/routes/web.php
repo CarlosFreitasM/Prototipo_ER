@@ -17,7 +17,7 @@ use Illuminate\Support\Facades\Route;
 
 
 Route::get('/ent', function () {
-    return view('pages.dashboardEntity');
+    return view('pages.dashboardEntidade');
 });
 
 Route::get('/', function () {

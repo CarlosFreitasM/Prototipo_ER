@@ -252,7 +252,7 @@
                                     <!-- Portfolio Modal - Text-->
                                     <p class="mb-4">Alguém que se faz passar por uma instituição ou empresa, enviando mensagens fraudulentas (por e-mail ou SMS) ou até com um telefonema. O objetivo é convencer o destinatário a fornecer informações pessoais ou bancárias que serão depois usadas para aceder à sua conta.</p>
                                     <p class="mb-4">No caso das mensagens, acontece frequentemente ser enviado um link para uma página falsa (muitas vezes semelhante à enviada pela entidade oficial e autêntica) que lhe solicita os dados pessoais. Pode surgir também uma janela no site que está a visitar, solicitando o mesmo tipo de informação.</p>
-                                    <p class="mb-4">Fonte: <a href="url">https://www.cgd.pt/Site/Saldo-Positivo/protecao/Pages/fraudes-e-burlas-online-como-proteger.aspx</a></p> 
+                                    <p class="mb-4">Fonte: <a href="https://www.cgd.pt/Site/Saldo-Positivo/protecao/Pages/fraudes-e-burlas-online-como-proteger.aspx" target="_blank">https://www.cgd.pt/Site/Saldo-Positivo/protecao/Pages/fraudes-e-burlas-online-como-proteger.aspx</a></p> 
                                     <button class="btn btn-primary" data-bs-dismiss="modal">
                                         <i class="fas fa-xmark fa-fw"></i>
                                         Fechar
@@ -286,7 +286,7 @@
                                     <!-- Portfolio Modal - Text-->
                                     <p class="mb-4">Através do download de um ficheiro ou no curso da navegação em sites, é instalado um vírus informático no seu dispositivo eletrónico.</p>
                                     <p class="mb-4">Este vírus direciona para determinada página falsa na internet, a chamada página espelho, onde o utilizador regista, inadvertidamente, os seus dados pessoais, que são depois usados por terceiros.</p>
-                                    <p class="mb-4">Fonte: <a href="url">https://www.cgd.pt/Site/Saldo-Positivo/protecao/Pages/fraudes-e-burlas-online-como-proteger.aspx</a></p> 
+                                    <p class="mb-4">Fonte: <a href="https://www.cgd.pt/Site/Saldo-Positivo/protecao/Pages/fraudes-e-burlas-online-como-proteger.aspx" target="_blank">https://www.cgd.pt/Site/Saldo-Positivo/protecao/Pages/fraudes-e-burlas-online-como-proteger.aspx</a></p> 
                                     <button class="btn btn-primary" data-bs-dismiss="modal">
                                         <i class="fas fa-xmark fa-fw"></i>
                                         Fechar
@@ -319,7 +319,7 @@
                                     <img class="img-fluid rounded mb-5" src="assets/img/burlas/spyware.png" width="300" height="300" alt="..." />
                                     <!-- Portfolio Modal - Text-->
                                     <p class="mb-4">Sem que o utilizador se aperceba, é instalado no seu dispositivo um programa malicioso que pode registar dados de maior melindre. Isto pode acontecer num momento do pagamento das suas compras online ou no acesso ao homebanking. Ou seja, quando estiver a registar informação mais sensível ou pessoal.</p>
-                                    <p class="mb-4">Fonte: <a href="url">https://www.cgd.pt/Site/Saldo-Positivo/protecao/Pages/fraudes-e-burlas-online-como-proteger.aspx</a></p> 
+                                    <p class="mb-4">Fonte: <a href="https://www.cgd.pt/Site/Saldo-Positivo/protecao/Pages/fraudes-e-burlas-online-como-proteger.aspx" target="_blank">https://www.cgd.pt/Site/Saldo-Positivo/protecao/Pages/fraudes-e-burlas-online-como-proteger.aspx</a></p> 
                                     <button class="btn btn-primary" data-bs-dismiss="modal">
                                         <i class="fas fa-xmark fa-fw"></i>
                                         Fechar
@@ -353,7 +353,7 @@
                                     <!-- Portfolio Modal - Text-->
                                     <p class="mb-4">Alguém usa o seu número de telefone – fornecido por si ou tirado das redes sociais – para, fazendo-se passar por si, pedir uma segunda via do seu cartão de telemóvel.</p>
                                     <p class="mb-4">A partir desse momento, todas as chamadas e SMS que receber (incluindo as passwords que o seu banco lhe envia para fazer transações online) são direcionadas para este segundo cartão.</p>
-                                    <p class="mb-4">Fonte: <a href="url">https://www.cgd.pt/Site/Saldo-Positivo/protecao/Pages/fraudes-e-burlas-online-como-proteger.aspx</a></p> 
+                                    <p class="mb-4">Fonte: <a href="https://www.cgd.pt/Site/Saldo-Positivo/protecao/Pages/fraudes-e-burlas-online-como-proteger.aspx" target="_blank">https://www.cgd.pt/Site/Saldo-Positivo/protecao/Pages/fraudes-e-burlas-online-como-proteger.aspx</a></p> 
                                     <button class="btn btn-primary" data-bs-dismiss="modal">
                                         <i class="fas fa-xmark fa-fw"></i>
                                         Fechar
@@ -386,7 +386,7 @@
                                     <img class="img-fluid rounded mb-5" src="assets/img/burlas/shoulder_surfing.png" width="300" height="300" alt="..." />
                                     <!-- Portfolio Modal - Text-->
                                     <p class="mb-4">Num local com uma grande aglomeração de pessoas, alguém que o observa, quando insere as suas passwords ou dados pessoais num telemóvel ou tablet, passa a poder aceder, em seu nome, a esses sites ou aplicações.</p>
-                                    <p class="mb-4">Fonte: <a href="url">https://www.cgd.pt/Site/Saldo-Positivo/protecao/Pages/fraudes-e-burlas-online-como-proteger.aspx</a></p> 
+                                    <p class="mb-4">Fonte: <a href="https://www.cgd.pt/Site/Saldo-Positivo/protecao/Pages/fraudes-e-burlas-online-como-proteger.aspx" target="_blank">https://www.cgd.pt/Site/Saldo-Positivo/protecao/Pages/fraudes-e-burlas-online-como-proteger.aspx</a></p> 
                                     <button class="btn btn-primary" data-bs-dismiss="modal">
                                         <i class="fas fa-xmark fa-fw"></i>
                                         Fechar
@@ -421,7 +421,7 @@
                                     <p class="mb-4">Invadir um perfil do Facebook para extorquir dinheiro é um dos esquemas que mais preocupa a PJ neste momento. O perfil é usurpado por hackers que depois colocam mensagens falsas que são enviadas para os amigos e familiares da pessoa.</p>
                                     <p class="mb-4">Num caso, a pessoa dizia estar a passar por uma situação aflitiva em Espanha e por isso precisava de dinheiro. Os amigos acreditaram e enviarem quantias para um NIB referido no texto. Era fraude. A própria pessoa desconhecia e os amigos e familiares foram lesados em centenas de euros.</p>
                                     <p class="mb-4">Conselho: Proteja o seu computador e telemóvel de ataques informáticos. Não envie dinheiro a nenhum amigo através de conta indicada numa rede social. </p>
-                                    <p class="mb-4">Fonte: <a href="url">https://www.dn.pt/sociedade/cinco-esquemas-de-burla-pela-net-que-estao-na-moda-5030434.html</a></p> 
+                                    <p class="mb-4">Fonte: <a href="https://www.dn.pt/sociedade/cinco-esquemas-de-burla-pela-net-que-estao-na-moda-5030434.html" target="_blank">https://www.dn.pt/sociedade/cinco-esquemas-de-burla-pela-net-que-estao-na-moda-5030434.html</a></p> 
                                     <button class="btn btn-primary" data-bs-dismiss="modal">
                                         <i class="fas fa-xmark fa-fw"></i>
                                         Fechar

@@ -15,7 +15,7 @@
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css" />
     <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css" />
     <!-- Para podermos usar o Bootstrap  -->
-    @vite(["resources/css/bootstrap.css", "resources/css/styles.css"])
+    @vite(["resources/css/bootstrap.css", "resources/css/styles.css", "resources/js/scripts.js", "resources/js/bootstrap.js"])
     
 </head>
 
@@ -205,7 +205,7 @@
             </div>
         </div>
     </div>
-    <!-- NEW: Burla 2 Pharming | OLD: Portfolio Modal 2-->
+    <!-- Atualizar Entidades Competentes-->
     <div class="portfolio-modal modal fade" id="atualizarEntidades" tabindex="-1" aria-labelledby="atualizarEntidades" aria-hidden="true">
         <div class="modal-dialog modal-xl">
             <div class="modal-content">
@@ -231,6 +231,7 @@
                                       <tr>
                                         <th scope="col">#</th>
                                         <th scope="col">Nome</th>
+                                        <th scope="col">Tag</th>
                                         <th scope="col">Contacto</th>
                                       </tr>
                                     </thead>
@@ -272,7 +273,7 @@
             </div>
         </div>
     </div>
-    <!--NEW: Burla 3 Spyware |  Portfolio Modal 3-->
+    <!--Atualizar Burlas-->
     <div class="portfolio-modal modal fade" id="atualizarBurlas" tabindex="-1" aria-labelledby="atualizarBurlas" aria-hidden="true">
         <div class="modal-dialog modal-xl">
             <div class="modal-content">
@@ -340,7 +341,7 @@
             </div>
         </div>
     </div>
-    <!-- -->
+    <!-- Lista de Erros-->
     <div class="portfolio-modal modal fade" id="erro" tabindex="-1" aria-labelledby="erro" aria-hidden="true">
         <div class="modal-dialog modal-xl">
             <div class="modal-content">

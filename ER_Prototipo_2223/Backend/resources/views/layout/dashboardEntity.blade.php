@@ -15,7 +15,7 @@
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css" />
     <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css" />
     <!-- Para podermos usar o Bootstrap  -->
-    @vite(["resources/css/bootstrap.css", "resources/css/styles.css"])
+    @vite(["resources/css/bootstrap.css", "resources/css/styles.css", "resources/js/scripts.js", "resources/js/bootstrap.js"])
 </head>
 
 <body id="page-top">
@@ -316,7 +316,8 @@
                                       </tr>
                                       <tr>
                                         <th scope="row">3</th>
-                                        <td colspan="2"></td>
+                                        <td></td>
+                                        <td></td>
                                         <td></td>
                                       </tr>
                                     </tbody>

@@ -2,9 +2,10 @@
 
 
 @section('header')
+    <!-- Navigation-->
         <nav class="navbar navbar-expand-lg bg-secondary text-uppercase fixed-top" id="mainNav">
             <div class="container">
-                <a class="navbar-brand" href="#page-top">Burlas Online</a>
+                <a class="navbar-brand" href="#page-top"><i class="fas fa-exclamation-triangle mx-1"></i>Burlas Online</a>
                 <button class="navbar-toggler text-uppercase font-weight-bold bg-primary text-white rounded" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
                     Menu
                     <i class="fas fa-bars"></i>
@@ -16,7 +17,6 @@
                         <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="#reportar">Reportar</a></li>
                     </ul>
                 </div>
-            </div>
             <!-- Login -->
             <div class="portfolio-item mx-auto" data-bs-toggle="modal" data-bs-target="#login">
                     <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
@@ -32,8 +32,9 @@
 @endsection
 
 @section('content')
-    <header class="masthead bg-primary text-white text-center">
 
+        <!-- Masthead-->
+        <header class="masthead bg-primary text-white text-center">
             <div class="container d-flex align-items-center flex-column">
                 <!-- Masthead Avatar Image-->
                 <img class="masthead-avatar mb-5" src="assets/img/avataaars.svg" alt="..." />
@@ -60,18 +61,18 @@
                     <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
                     <div class="divider-custom-line"></div>
                 </div>
-                <!-- Portfolio Grid Items-->
+                <!-- Burlas Grid Items-->
                 <div class="row justify-content-center">
-                    <!-- Portfolio Item 1-->
+                    <!-- NEW: Burla 1 Phishing | OLD:Portfolio Item 1-->
                     <div class="col-md-6 col-lg-4 mb-5">
                         <div class="portfolio-item mx-auto" data-bs-toggle="modal" data-bs-target="#portfolioModal1">
                             <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
                                 <div class="portfolio-item-caption-content text-center text-white"><i class="fas fa-plus fa-3x"></i></div>
                             </div>
-                            <img class="img-fluid" src="assets/img/burlas/identity_theft.png" alt="..." />
+                            <img class="img-fluid" src="assets/img/burlas/phishing.png" alt="..." />
                         </div>
                     </div>
-                    <!-- Portfolio Item 2-->
+                    <!-- NEW: Burla 2 Pharming | OLD:Portfolio Item 2-->
                     <div class="col-md-6 col-lg-4 mb-5">
                         <div class="portfolio-item mx-auto" data-bs-toggle="modal" data-bs-target="#portfolioModal2">
                             <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
@@ -80,46 +81,46 @@
                             <img class="img-fluid" src="assets/img/burlas/pharming.png" alt="..." />
                         </div>
                     </div>
-                    <!-- Portfolio Item 3-->
+                    <!--NEW: Burla 3 Spyware | OLD:Portfolio Item 3-->
                     <div class="col-md-6 col-lg-4 mb-5">
                         <div class="portfolio-item mx-auto" data-bs-toggle="modal" data-bs-target="#portfolioModal3">
-                            <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
-                                <div class="portfolio-item-caption-content text-center text-white"><i class="fas fa-plus fa-3x"></i></div>
-                            </div>
-                            <img class="img-fluid" src="assets/img/burlas/phishing.png" alt="..." />
-                        </div>
-                    </div>
-                    <!-- Portfolio Item 4-->
-                    <div class="col-md-6 col-lg-4 mb-5 mb-lg-0">
-                        <div class="portfolio-item mx-auto" data-bs-toggle="modal" data-bs-target="#portfolioModal4">
-                            <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
-                                <div class="portfolio-item-caption-content text-center text-white"><i class="fas fa-plus fa-3x"></i></div>
-                            </div>
-                            <img class="img-fluid" src="assets/img/burlas/shoulder_surfing.png" alt="..." />
-                        </div>
-                    </div>
-                    <!-- Portfolio Item 5-->
-                    <div class="col-md-6 col-lg-4 mb-5 mb-md-0">
-                        <div class="portfolio-item mx-auto" data-bs-toggle="modal" data-bs-target="#portfolioModal5">
-                            <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
-                                <div class="portfolio-item-caption-content text-center text-white"><i class="fas fa-plus fa-3x"></i></div>
-                            </div>
-                            <img class="img-fluid" src="assets/img/burlas/sim_card_swap.png" alt="..." />
-                        </div>
-                    </div>
-                    <!-- Portfolio Item 6-->
-                    <div class="col-md-6 col-lg-4">
-                        <div class="portfolio-item mx-auto" data-bs-toggle="modal" data-bs-target="#portfolioModal6">
                             <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
                                 <div class="portfolio-item-caption-content text-center text-white"><i class="fas fa-plus fa-3x"></i></div>
                             </div>
                             <img class="img-fluid" src="assets/img/burlas/spyware.png" alt="..." />
                         </div>
                     </div>
+                    <!--NEW: Burla 4 SIM Card Swap | OLD:Portfolio Item 4-->
+                    <div class="col-md-6 col-lg-4 mb-5 mb-lg-0">
+                        <div class="portfolio-item mx-auto" data-bs-toggle="modal" data-bs-target="#portfolioModal4">
+                            <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
+                                <div class="portfolio-item-caption-content text-center text-white"><i class="fas fa-plus fa-3x"></i></div>
+                            </div>
+                            <img class="img-fluid" src="assets/img/burlas/sim_card_swap.png" alt="..." />
+                        </div>
+                    </div>
+                    <!--NEW: Burla 5 Shoulder Surfing | OLD:Portfolio Item 5-->
+                    <div class="col-md-6 col-lg-4 mb-5 mb-md-0">
+                        <div class="portfolio-item mx-auto" data-bs-toggle="modal" data-bs-target="#portfolioModal5">
+                            <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
+                                <div class="portfolio-item-caption-content text-center text-white"><i class="fas fa-plus fa-3x"></i></div>
+                            </div>
+                            <img class="img-fluid" src="assets/img/burlas/shoulder_surfing.png" alt="..." />
+                        </div>
+                    </div>
+                    <!--NEW: Burla 6 Identity Theft | OLD:Portfolio Item 6-->
+                    <div class="col-md-6 col-lg-4">
+                        <div class="portfolio-item mx-auto" data-bs-toggle="modal" data-bs-target="#portfolioModal6">
+                            <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
+                                <div class="portfolio-item-caption-content text-center text-white"><i class="fas fa-plus fa-3x"></i></div>
+                            </div>
+                            <img class="img-fluid" src="assets/img/burlas/identity_theft.png" alt="..." />
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
-        <!-- About Section-->
+        <!--NEW: Prevenção contra Burlas Online | OLD: About Section-->
      <section class="page-section bg-primary text-white mb-0" id="prevencao">
             <div class="container">
                 <!-- About Section Heading-->
@@ -180,8 +181,43 @@
                 </div>
             </div>
         </section>
-        <!-- Portfolio Modals-->
-        <!-- Portfolio Modal 1-->
+        <!-- Footer-->
+        <footer class="footer text-center">
+            <div class="container">
+                <div class="row">
+                    <!-- Footer Location-->
+                    <div class="col-lg-4 mb-5 mb-lg-0">
+                        <h4 class="text-uppercase mb-4">Localização</h4>
+                        <p class="lead mb-0">
+                            Funchal,
+                            <br />
+                            Região Autónoma da Madeira
+                        </p>
+                    </div>
+                    <!-- Footer Social Icons-->
+                    <div class="col-lg-4 mb-5 mb-lg-0">
+                        <h4 class="text-uppercase mb-4">Partilhar</h4>
+                        <span class="btn btn-outline-light btn-social mx-1 facebook-btn"><i class="fab fa-fw fa-facebook-f"></i></span>
+                        <span class="btn btn-outline-light btn-social mx-1 twitter-btn"><i class="fab fa-fw fa-twitter"></i></span>
+                    </div>
+                    <!-- Footer About Text-->
+                    <div class="col-lg-4 mb-5 mb-lg-0">
+                        <h4 class="text-uppercase mb-4">Colaboração</h4>
+                        <p class="lead mb-0">
+                            Feito em colaboração com a Associação Regional de Defesa dos Direitos do Consumidor Regional,
+                            <a href="https://www.madeira.gov.pt/" target="_blank"> saiba mais</a>
+                            .
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- Copyright Section-->
+        <div class="copyright py-4 text-center text-white">
+            <div class="container"><small>Copyright &copy; ER Grupo1 2022/2023</small></div>
+        </div>
+        <!-- BURLAS Conteúdo| OLD: Portfolio Modals-->
+        <!-- NEW: Burla 1 Phishing | OLD: Portfolio Modal 1-->
         <div class="portfolio-modal modal fade" id="portfolioModal1" tabindex="-1" aria-labelledby="portfolioModal1" aria-hidden="true">
             <div class="modal-dialog modal-xl">
                 <div class="modal-content">
@@ -191,7 +227,7 @@
                             <div class="row justify-content-center">
                                 <div class="col-lg-8">
                                     <!-- Portfolio Modal - Title-->
-                                    <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0">Log Cabin</h2>
+                                    <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0">Phishing</h2>
                                     <!-- Icon Divider-->
                                     <div class="divider-custom">
                                         <div class="divider-custom-line"></div>
@@ -199,12 +235,14 @@
                                         <div class="divider-custom-line"></div>
                                     </div>
                                     <!-- Portfolio Modal - Image-->
-                                    <img class="img-fluid rounded mb-5" src="assets/img/burlas/identity_theft.png" alt="..." />
+                                    <img class="img-fluid rounded mb-5" src="assets/img/burlas/phishing.png" width="300" height="300" alt="..." />
                                     <!-- Portfolio Modal - Text-->
-                                    <p class="mb-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia neque assumenda ipsam nihil, molestias magnam, recusandae quos quis inventore quisquam velit asperiores, vitae? Reprehenderit soluta, eos quod consequuntur itaque. Nam.</p>
+                                    <p class="mb-4">Alguém que se faz passar por uma instituição ou empresa, enviando mensagens fraudulentas (por e-mail ou SMS) ou até com um telefonema. O objetivo é convencer o destinatário a fornecer informações pessoais ou bancárias que serão depois usadas para aceder à sua conta.</p>
+                                    <p class="mb-4">No caso das mensagens, acontece frequentemente ser enviado um link para uma página falsa (muitas vezes semelhante à enviada pela entidade oficial e autêntica) que lhe solicita os dados pessoais. Pode surgir também uma janela no site que está a visitar, solicitando o mesmo tipo de informação.</p>
+                                    <p class="mb-4">Fonte: <a href="https://www.cgd.pt/Site/Saldo-Positivo/protecao/Pages/fraudes-e-burlas-online-como-proteger.aspx" target="_blank">https://www.cgd.pt/Site/Saldo-Positivo/protecao/Pages/fraudes-e-burlas-online-como-proteger.aspx</a></p> 
                                     <button class="btn btn-primary" data-bs-dismiss="modal">
                                         <i class="fas fa-xmark fa-fw"></i>
-                                        Close Window
+                                        Fechar
                                     </button>
                                 </div>
                             </div>
@@ -213,7 +251,7 @@
                 </div>
             </div>
         </div>
-        <!-- Portfolio Modal 2-->
+        <!-- NEW: Burla 2 Pharming | OLD: Portfolio Modal 2-->
         <div class="portfolio-modal modal fade" id="portfolioModal2" tabindex="-1" aria-labelledby="portfolioModal2" aria-hidden="true">
             <div class="modal-dialog modal-xl">
                 <div class="modal-content">
@@ -223,7 +261,7 @@
                             <div class="row justify-content-center">
                                 <div class="col-lg-8">
                                     <!-- Portfolio Modal - Title-->
-                                    <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0">Tasty Cake</h2>
+                                    <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0">Pharming</h2>
                                     <!-- Icon Divider-->
                                     <div class="divider-custom">
                                         <div class="divider-custom-line"></div>
@@ -231,12 +269,14 @@
                                         <div class="divider-custom-line"></div>
                                     </div>
                                     <!-- Portfolio Modal - Image-->
-                                    <img class="img-fluid rounded mb-5" src="assets/img/burlas/pharming.png" alt="..." />
+                                    <img class="img-fluid rounded mb-5" src="assets/img/burlas/pharming.png" width="300" height="300" alt="..." />
                                     <!-- Portfolio Modal - Text-->
-                                    <p class="mb-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia neque assumenda ipsam nihil, molestias magnam, recusandae quos quis inventore quisquam velit asperiores, vitae? Reprehenderit soluta, eos quod consequuntur itaque. Nam.</p>
+                                    <p class="mb-4">Através do download de um ficheiro ou no curso da navegação em sites, é instalado um vírus informático no seu dispositivo eletrónico.</p>
+                                    <p class="mb-4">Este vírus direciona para determinada página falsa na internet, a chamada página espelho, onde o utilizador regista, inadvertidamente, os seus dados pessoais, que são depois usados por terceiros.</p>
+                                    <p class="mb-4">Fonte: <a href="https://www.cgd.pt/Site/Saldo-Positivo/protecao/Pages/fraudes-e-burlas-online-como-proteger.aspx" target="_blank">https://www.cgd.pt/Site/Saldo-Positivo/protecao/Pages/fraudes-e-burlas-online-como-proteger.aspx</a></p> 
                                     <button class="btn btn-primary" data-bs-dismiss="modal">
                                         <i class="fas fa-xmark fa-fw"></i>
-                                        Close Window
+                                        Fechar
                                     </button>
                                 </div>
                             </div>
@@ -245,7 +285,7 @@
                 </div>
             </div>
         </div>
-        <!-- Portfolio Modal 3-->
+        <!--NEW: Burla 3 Spyware |  Portfolio Modal 3-->
         <div class="portfolio-modal modal fade" id="portfolioModal3" tabindex="-1" aria-labelledby="portfolioModal3" aria-hidden="true">
             <div class="modal-dialog modal-xl">
                 <div class="modal-content">
@@ -255,7 +295,7 @@
                             <div class="row justify-content-center">
                                 <div class="col-lg-8">
                                     <!-- Portfolio Modal - Title-->
-                                    <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0">Circus Tent</h2>
+                                    <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0">Spyware</h2>
                                     <!-- Icon Divider-->
                                     <div class="divider-custom">
                                         <div class="divider-custom-line"></div>
@@ -263,12 +303,13 @@
                                         <div class="divider-custom-line"></div>
                                     </div>
                                     <!-- Portfolio Modal - Image-->
-                                    <img class="img-fluid rounded mb-5" src="assets/img/burlas/phishing.png" alt="..." />
+                                    <img class="img-fluid rounded mb-5" src="assets/img/burlas/spyware.png" width="300" height="300" alt="..." />
                                     <!-- Portfolio Modal - Text-->
-                                    <p class="mb-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia neque assumenda ipsam nihil, molestias magnam, recusandae quos quis inventore quisquam velit asperiores, vitae? Reprehenderit soluta, eos quod consequuntur itaque. Nam.</p>
+                                    <p class="mb-4">Sem que o utilizador se aperceba, é instalado no seu dispositivo um programa malicioso que pode registar dados de maior melindre. Isto pode acontecer num momento do pagamento das suas compras online ou no acesso ao homebanking. Ou seja, quando estiver a registar informação mais sensível ou pessoal.</p>
+                                    <p class="mb-4">Fonte: <a href="https://www.cgd.pt/Site/Saldo-Positivo/protecao/Pages/fraudes-e-burlas-online-como-proteger.aspx" target="_blank">https://www.cgd.pt/Site/Saldo-Positivo/protecao/Pages/fraudes-e-burlas-online-como-proteger.aspx</a></p> 
                                     <button class="btn btn-primary" data-bs-dismiss="modal">
                                         <i class="fas fa-xmark fa-fw"></i>
-                                        Close Window
+                                        Fechar
                                     </button>
                                 </div>
                             </div>
@@ -277,7 +318,7 @@
                 </div>
             </div>
         </div>
-        <!-- Portfolio Modal 4-->
+        <!--NEW: Burla 4 SIM Card Swap | OLD: Portfolio Modal 4-->
         <div class="portfolio-modal modal fade" id="portfolioModal4" tabindex="-1" aria-labelledby="portfolioModal4" aria-hidden="true">
             <div class="modal-dialog modal-xl">
                 <div class="modal-content">
@@ -287,7 +328,7 @@
                             <div class="row justify-content-center">
                                 <div class="col-lg-8">
                                     <!-- Portfolio Modal - Title-->
-                                    <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0">Controller</h2>
+                                    <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0">SIM Card Swap</h2>
                                     <!-- Icon Divider-->
                                     <div class="divider-custom">
                                         <div class="divider-custom-line"></div>
@@ -295,12 +336,14 @@
                                         <div class="divider-custom-line"></div>
                                     </div>
                                     <!-- Portfolio Modal - Image-->
-                                    <img class="img-fluid rounded mb-5" src="assets/img/burlas/shoulder_surfing.png" alt="..." />
+                                    <img class="img-fluid rounded mb-5" src="assets/img/burlas/sim_card_swap.png" width="300" height="300" alt="..." />
                                     <!-- Portfolio Modal - Text-->
-                                    <p class="mb-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia neque assumenda ipsam nihil, molestias magnam, recusandae quos quis inventore quisquam velit asperiores, vitae? Reprehenderit soluta, eos quod consequuntur itaque. Nam.</p>
+                                    <p class="mb-4">Alguém usa o seu número de telefone – fornecido por si ou tirado das redes sociais – para, fazendo-se passar por si, pedir uma segunda via do seu cartão de telemóvel.</p>
+                                    <p class="mb-4">A partir desse momento, todas as chamadas e SMS que receber (incluindo as passwords que o seu banco lhe envia para fazer transações online) são direcionadas para este segundo cartão.</p>
+                                    <p class="mb-4">Fonte: <a href="https://www.cgd.pt/Site/Saldo-Positivo/protecao/Pages/fraudes-e-burlas-online-como-proteger.aspx" target="_blank">https://www.cgd.pt/Site/Saldo-Positivo/protecao/Pages/fraudes-e-burlas-online-como-proteger.aspx</a></p> 
                                     <button class="btn btn-primary" data-bs-dismiss="modal">
                                         <i class="fas fa-xmark fa-fw"></i>
-                                        Close Window
+                                        Fechar
                                     </button>
                                 </div>
                             </div>
@@ -309,7 +352,7 @@
                 </div>
             </div>
         </div>
-        <!-- Portfolio Modal 5-->
+        <!--NEW: Burla 5 Shoulder Surfing | OLD: Portfolio Modal 5-->
         <div class="portfolio-modal modal fade" id="portfolioModal5" tabindex="-1" aria-labelledby="portfolioModal5" aria-hidden="true">
             <div class="modal-dialog modal-xl">
                 <div class="modal-content">
@@ -319,7 +362,7 @@
                             <div class="row justify-content-center">
                                 <div class="col-lg-8">
                                     <!-- Portfolio Modal - Title-->
-                                    <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0">Locked Safe</h2>
+                                    <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0">Shoulder Surfing</h2>
                                     <!-- Icon Divider-->
                                     <div class="divider-custom">
                                         <div class="divider-custom-line"></div>
@@ -327,12 +370,13 @@
                                         <div class="divider-custom-line"></div>
                                     </div>
                                     <!-- Portfolio Modal - Image-->
-                                    <img class="img-fluid rounded mb-5" src="assets/img/burlas/sim_card_swap.png" alt="..." />
+                                    <img class="img-fluid rounded mb-5" src="assets/img/burlas/shoulder_surfing.png" width="300" height="300" alt="..." />
                                     <!-- Portfolio Modal - Text-->
-                                    <p class="mb-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia neque assumenda ipsam nihil, molestias magnam, recusandae quos quis inventore quisquam velit asperiores, vitae? Reprehenderit soluta, eos quod consequuntur itaque. Nam.</p>
+                                    <p class="mb-4">Num local com uma grande aglomeração de pessoas, alguém que o observa, quando insere as suas passwords ou dados pessoais num telemóvel ou tablet, passa a poder aceder, em seu nome, a esses sites ou aplicações.</p>
+                                    <p class="mb-4">Fonte: <a href="https://www.cgd.pt/Site/Saldo-Positivo/protecao/Pages/fraudes-e-burlas-online-como-proteger.aspx" target="_blank">https://www.cgd.pt/Site/Saldo-Positivo/protecao/Pages/fraudes-e-burlas-online-como-proteger.aspx</a></p> 
                                     <button class="btn btn-primary" data-bs-dismiss="modal">
                                         <i class="fas fa-xmark fa-fw"></i>
-                                        Close Window
+                                        Fechar
                                     </button>
                                 </div>
                             </div>
@@ -341,7 +385,7 @@
                 </div>
             </div>
         </div>
-        <!-- Portfolio Modal 6-->
+        <!--NEW: Burla 6 Identity Theft | OLD: Portfolio Modal 6-->
         <div class="portfolio-modal modal fade" id="portfolioModal6" tabindex="-1" aria-labelledby="portfolioModal6" aria-hidden="true">
             <div class="modal-dialog modal-xl">
                 <div class="modal-content">
@@ -351,7 +395,7 @@
                             <div class="row justify-content-center">
                                 <div class="col-lg-8">
                                     <!-- Portfolio Modal - Title-->
-                                    <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0">Submarine</h2>
+                                    <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0">Roubo de Identidade</h2>
                                     <!-- Icon Divider-->
                                     <div class="divider-custom">
                                         <div class="divider-custom-line"></div>
@@ -359,12 +403,15 @@
                                         <div class="divider-custom-line"></div>
                                     </div>
                                     <!-- Portfolio Modal - Image-->
-                                    <img class="img-fluid rounded mb-5" src="assets/img/burlas/spyware.png" alt="..." />
+                                    <img class="img-fluid rounded mb-5" src="assets/img/burlas/identity_theft.png" width="300" height="300" alt="..." />
                                     <!-- Portfolio Modal - Text-->
-                                    <p class="mb-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia neque assumenda ipsam nihil, molestias magnam, recusandae quos quis inventore quisquam velit asperiores, vitae? Reprehenderit soluta, eos quod consequuntur itaque. Nam.</p>
+                                    <p class="mb-4">Invadir um perfil do Facebook para extorquir dinheiro é um dos esquemas que mais preocupa a PJ neste momento. O perfil é usurpado por hackers que depois colocam mensagens falsas que são enviadas para os amigos e familiares da pessoa.</p>
+                                    <p class="mb-4">Num caso, a pessoa dizia estar a passar por uma situação aflitiva em Espanha e por isso precisava de dinheiro. Os amigos acreditaram e enviarem quantias para um NIB referido no texto. Era fraude. A própria pessoa desconhecia e os amigos e familiares foram lesados em centenas de euros.</p>
+                                    <p class="mb-4">Conselho: Proteja o seu computador e telemóvel de ataques informáticos. Não envie dinheiro a nenhum amigo através de conta indicada numa rede social. </p>
+                                    <p class="mb-4">Fonte: <a href="https://www.dn.pt/sociedade/cinco-esquemas-de-burla-pela-net-que-estao-na-moda-5030434.html" target="_blank">https://www.dn.pt/sociedade/cinco-esquemas-de-burla-pela-net-que-estao-na-moda-5030434.html</a></p> 
                                     <button class="btn btn-primary" data-bs-dismiss="modal">
                                         <i class="fas fa-xmark fa-fw"></i>
-                                        Close Window
+                                        Fechar
                                     </button>
                                 </div>
                             </div>

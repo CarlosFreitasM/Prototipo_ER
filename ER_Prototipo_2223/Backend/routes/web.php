@@ -28,10 +28,12 @@ Route::get('/createReport', function () {
     return view('pages.createReport');
 });
 
-Route::get('/createReport/create', [ReportController::class, 'create']);
+Route::get('/createReport/create', [ReportController::class, 'create'])->name('createReport');
 Route::post('/createReport', [ReportController::class, 'store']);
 
 Route::get('/tec', [ReportController::class,'index'])->name('tecReports');
+
+//Route::get('/tec', [TagController::class,'index'])->name('tecTags');
 
 
 

@@ -143,39 +143,53 @@
                                 <p class="mb-4">Atribua Tags </p>
                                 <table class="table table-dark table-striped">
                                     <thead>
-                                      <tr>
-                                        <th scope="col">#</th>
-                                        <th scope="col">Nome</th>
-                                        <th scope="col">Tag</th>
-                                        <th scope="col">Data de Adição</th>
-                                      </tr>
+                                        <tr>
+                                            <th scope="col">#</th>
+                                            <th scope="col">Nome cliente</th>
+                                            <th scope="col">Descrição</th>
+                                            <th scope="col">Tag</th>
+                                            <th scope="col">Data de Adição</th>
+                                            <th scope="col">Ações</th>
+                                        </tr>
+                                    
+                                      
                                     </thead>
                                     <tbody>
-                                      <tr>
-                                        <th scope="row">1</th>
-                                        <td></td>
-                                        <td></td>
-                                        <td></td>
-                                      </tr>
-                                      <tr>
-                                        <th scope="row">2</th>
-                                        <td></td>
-                                        <td></td>
-                                        <td></td>
-                                      </tr>
-                                      <tr>
-                                        <th scope="row">3</th>
-                                        <td colspan="2"></td>
-                                        <td></td>
-                                      </tr>
+                                        @foreach($tecReports as $report)
+                                            <tr>
+                                                <td>
+                                                    {{ $report->id }}
+                                                </td>
+                                                <td>
+                                                    {{ $report->fullname_cliente }}
+                                                </td>
+                                                <td>
+                                                    {{ $report->description }}
+                                                </td>
+                                                <td id="tag-edit-{{ $report->id }}" data-reportid="{{ $report->id }}"> 
+                                                    {{ $report->getTag->tagDescription }}
+                                                </td>
+                                                <td>
+                                                    {{ $report->created_at }}
+                                                </td>
+                                                <!-- <td>
+                                                    <button id="edit-{{ $report->id }}" data-tagid="{{ $report->getTag->id }}">
+                                                        Editar
+                                                    </button>
+                                                </td>-->
+                                                <td>
+                                                    <div class="btn-group" role="group" aria-label="Basic mixed styles example">
+                                                        <button type="button" class="btn btn-danger">Apagar</button>
+                                                        <button type="button" class="btn btn-warning">Editar</button>
+                                                        <button type="button" class="btn btn-success">Atribuir</button>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                        @endforeach
+                                      
                                     </tbody>
                                 </table>
 
-                                    <div class="btn-group" role="group" aria-label="Basic mixed styles example">
-                                        <button type="button" class="btn btn-danger">Apagar</button>
-                                        <button type="button" class="btn btn-warning">Editar</button>
-                                         <button type="button" class="btn btn-success">Atribuir</button>
-                                    </div>
                                     <div> <br> </div>
                                 <button class="btn btn-primary" data-bs-dismiss="modal">
                                     <i class="fas fa-xmark fa-fw"></i>
@@ -218,8 +232,8 @@
                                         <th scope="col">Contacto</th>
         </tr>
                                     </thead>
-        <tbody>
-                    <tr>
+                                <tbody>
+                                            <tr>
                                         <th scope="row">1</th>
                                         <td></td>
                                         <td></td>

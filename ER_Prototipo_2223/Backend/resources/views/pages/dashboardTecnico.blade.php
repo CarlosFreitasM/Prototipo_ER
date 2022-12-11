@@ -94,7 +94,6 @@
             <th>Ações</th>
         </tr>
         <tbody>
-            
                 @foreach($tecReports as $report)
                     <tr>
                         <td>
@@ -109,13 +108,14 @@
                         <td>
                             {{ $report->description }}
                         </td>
-                        <td>
+                        <td id="tag-edit-{{ $report->id }}" data-reportid="{{ $report->id }}"> 
                             {{ $report->getTag->tagDescription }}
                         </td>
+
                         <td>
-                            <div id="edit" data-tagid="{{ $report->getTag->id }}">
-                                <a href=>Editar</a>
-                            </div>
+                            <button id="edit-{{ $report->id }}" data-tagid="{{ $report->getTag->id }}">
+                                Editar
+                            </button>
                         </td>
                     <tr>
                 @endforeach

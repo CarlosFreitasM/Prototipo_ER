@@ -14,5 +14,11 @@ class Report extends Model
         'email_report',
         'phone_report',
         'description',
+        'tag',
     ];
+
+    public function getTag(){
+        return $this->hasOne(Tag::class, 'id', 'tag');
+
+    } 
 }

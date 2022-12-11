@@ -36,7 +36,7 @@ class UserController extends Controller
     public function store(Request $request)
     {
         $name= $request["name"];
-        $email=$request["enail"];
+        $email=$request["email"];
         $phone=$request["password"];
         $reports=new User();
         $reports->fullname_cliente = $name;

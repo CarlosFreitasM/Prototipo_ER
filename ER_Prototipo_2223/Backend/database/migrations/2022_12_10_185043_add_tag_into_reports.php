@@ -13,13 +13,9 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('reports', function (Blueprint $table) {
-            $table->id();
-            $table->string("fullname_cliente", 100);
-            $table->string("email_report", 100);
-            $table->string("phone_report", 100);
-            $table->text("description");
-            $table->timestamps();
+        Schema::table('reports', function (Blueprint $table) {
+            $table->bigInteger('tag')->unsigned();
+            $table->foreign('tag')->references('id')->on('tags');
         });
     }
 
@@ -30,6 +26,8 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('reports');
+        Schema::table('reports', function($table) {
+            $table->dropColumn('tag');
+        });
     }
 };

@@ -15,17 +15,13 @@ use Illuminate\Support\Facades\Route;
 */
 
 
-Route::get('/tec', function () {
-    return view('layout.dashboardTecn');
-});
-
 
 Route::get('/ent', function () {
-    return view('layout.dashboardEntity');
+    return view('pages.dashboardEntity');
 });
 
 Route::get('/', function () {
-    return view('layout.layouts');
+    return view('pages.burlasfreq');
 });
 
 Route::get('/createReport', function () {
@@ -35,6 +31,8 @@ Route::get('/createReport', function () {
 Route::get('/createReport/create', [ReportController::class, 'create']);
 Route::post('/createReport', [ReportController::class, 'store']);
 
-//Route::get('/tec', [ReportController::class,'index'])->name('tecReports');
+Route::get('/tec', [ReportController::class,'index'])->name('tecReports');
+
+
 
 

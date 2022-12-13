@@ -179,11 +179,13 @@
                             <input class="form-control" type="text" name="email" placeholder="Email" required><br>
                             <input class="form-control" type="text" name="phone" placeholder="Telefone" required><br>
                             <textarea class="form-control" style="height: 10rem" type="text" name="message" placeholder="Descrição da burla" required></textarea><br>
-                            <select class="form-control" id="tagsName"><br>
+                            <label for="tagsName">Tags</label>
+                            <select class="form-control" id="tagsName" name="tagsName"><br>
                                 <option value=""></option>
                                 @foreach($tecTags as $tag)
                                     <option value="{{ $tag->id }}">{{$tag->tagDescription}}</option>
                                 @endforeach
+                            <input class="form-control" type="hidden" name="state" value="1"><br>
                             <input class="btn btn-primary btn-xl" type="submit" name="report" value="Reportar"><br>
 
                         </form>
@@ -473,7 +475,11 @@
                                     <h3>Simulação de login:</h3>
                                     <a href="/tec">simular login como técnico</a>
                                     <br>
-                                    <a href="/ent">simular login como entidade competente</a>
+                                    <a href="/ent">simular login como entidade competente geral</a>
+                                    <br>
+                                    <a href="/entpharming">simular login como entidade competente de pharming</a>
+                                    <br>
+                                    <a href="/entphishing">simular login como entidade competente phising</a>
                                     <br>
                                     <br>
                                     

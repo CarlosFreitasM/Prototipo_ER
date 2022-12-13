@@ -7,7 +7,6 @@ use App\Models\Tag;
 
 class MainController extends Controller
 {
-
     /**
      * Display a listing of the resource.
      *
@@ -18,6 +17,7 @@ class MainController extends Controller
         $tags = Tag::all();
         return view('pages.burlasfreq', ['tecTags' => $tags]);
     }
+
 
     /**
      * Show the form for creating a new resource.

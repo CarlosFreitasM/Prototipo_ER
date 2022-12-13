@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Report;
+use App\Models\Tag;
+use App\Models\State;
 
 class ReportController extends Controller
 {
@@ -15,7 +17,16 @@ class ReportController extends Controller
     public function index()
     {
         $reports = Report::all();
-        return view('pages.dashboardTecnico', ['tecReports'=>$reports]);
+        $tags = Tag::all();
+        return view('pages.dashboardTecnico', ['tecReports'=>$reports, 'tecTagger'=>$tags]);
+    }
+
+    public function indexin()
+    {
+        $reports = Report::all();
+        $tags = Tag::all();
+        $states = State::all();
+        return view('pages.dashboardEntidade', ['entReports'=>$reports, 'tecTagger'=>$tags, 'stateReport'=>$states]);
     }
 
 
@@ -41,11 +52,15 @@ class ReportController extends Controller
         $email=$request["email"];
         $phone=$request["phone"];
         $description=$request["message"];
+        $tag=$request["tagsName"];
+        $state=$request["state"];
         $reports=new Report();
         $reports->fullname_cliente = $name;
         $reports->email_report = $email;
         $reports->phone_report = $phone;
         $reports->description = $description;
+        $reports->tag = $tag;
+        $reports->state = $state;
         $reports->save();
         return redirect('/')->with('mensagem','Reporte criado');
     }
@@ -82,7 +97,38 @@ class ReportController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $reports = Report::findOrFail($id);
+        $tagname = $request["tagName"];
+        $reports->tag = $tagname;
+        $reports->update();
+        return redirect('/tec')->with('mensagem','Tag atribuida com sucesso');
+    }
+
+    public function updateent(Request $request, $id)
+    {
+        $reports = Report::findOrFail($id);
+        $statename = $request["stateName"];
+        $reports->state = $statename;
+        $reports->update();
+        return redirect('/ent')->with('mensagem','State atribuida com sucesso');
+    }
+
+    public function updatephi(Request $request, $id)
+    {
+        $reports = Report::findOrFail($id);
+        $statename = $request["stateName"];
+        $reports->state = $statename;
+        $reports->update();
+        return redirect('/entphising')->with('mensagem','State phishing atribuida com sucesso');
+    }
+
+    public function updatepha(Request $request, $id)
+    {
+        $reports = Report::findOrFail($id);
+        $statename = $request["stateName"];
+        $reports->state = $statename;
+        $reports->update();
+        return redirect('/entpharming')->with('mensagem','State pharming atribuida com sucesso');
     }
 
     /**

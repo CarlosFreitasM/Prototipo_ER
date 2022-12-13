@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\ReportController;
 use App\Http\Controllers\MainController;
+
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -30,14 +31,20 @@ Route::get('/createReport', function () {
 
 Route::post('/createReport', [ReportController::class, 'store']);
 
-Route::post('/createReport', [ReportController::class, 'store']);
-
 Route::get('/', [MainController::class,'index'])->name('tecTags');
 
 Route::get('/tec', [ReportController::class,'index'])->name('tecReports');
 
+Route::put('/tec/{id}', [ReportController::class,'update'])->name('tecTagsupdate');
 
+Route::get('/ent', [ReportController::class,'indexin'])->name('entReports');
 
+Route::get('/entphishing', [ReportController::class,'indexin'])->name('entReports');
 
+Route::get('/entpharming', [ReportController::class,'indexin'])->name('entReports');
+
+Route::put('/ent/{id}', [ReportController::class,'update'])->name('entReportsState');
+Route::put('/entphising/{id}', [ReportController::class,'updatephi'])->name('entReportsState');
+Route::put('/entpharming/{id}', [ReportController::class,'updatepha'])->name('entReportsState');
 
 

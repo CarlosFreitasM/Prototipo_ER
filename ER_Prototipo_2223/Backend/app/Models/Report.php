@@ -20,4 +20,9 @@ class Report extends Model
         return $this->hasOne(Tag::class, 'id', 'tag');
 
     } 
+
+    public function getState(){
+        return $this->hasOne(State::class, 'id', 'state');
+
+    } 
 }

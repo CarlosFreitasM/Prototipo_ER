@@ -3,6 +3,7 @@
 namespace Database\Factories;
 
 use App\Models\Tag;
+use App\Models\State;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 /**
@@ -23,6 +24,7 @@ class ReportFactory extends Factory
             'phone_report'=>$this->faker->phoneNumber(),
             'description'=>$this->faker->text(),
             'tag'=>Tag::all()->random()->id,
+            'state'=>State::all()->random()->id,
 
         ];
     }

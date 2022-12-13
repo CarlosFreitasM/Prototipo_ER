@@ -1,10 +1,6 @@
 @extends ('layout.layouts')
 
-@section('scripts')
-<script>
 
-</script>
-@endsection
 
 @section('header')
 <nav class="navbar navbar-expand-lg bg-secondary text-uppercase fixed-top" id="mainNav">
@@ -153,7 +149,8 @@
                                         <th scope="col">#</th>
                                         <th scope="col">Nome cliente</th>
                                         <th scope="col">Descrição</th>
-                                        <th scope="col">Tag</th>
+                                        <th scope="col">Mudar Tag para</th>
+                                        <th scope="col">Tag Atual</th>
                                         <th scope="col">Data de Adição</th>
                                         <th scope="col"> <i class="fas fa-tools"></i></th>
                                     </tr>
@@ -173,8 +170,18 @@
                                             {{ $report->description }}
                                         </td>
                                         @if(isset($report->getTag->tagDescription))
-                                        <td contenteditable="true" id="tag-{{ $report->id }}" data-reportid="{{ $report->getTag->id }}">
-
+                                        <td>
+                                            <form id="form-atr-{{ $report->id }}" action="/tec/{{ $report->id }}" method="post">
+                                                @csrf
+                                                @method('PUT')
+                                                <select id="tag-{{ $report->id }}-edit" name="tagName">
+                                                    @foreach($tecTagger as $tag)
+                                                    <option value="{{$tag->id}}">{{$tag->tagDescription}}</option>
+                                                    @endforeach
+                                                </select>
+                                            </form>
+                                        </td>
+                                        <td id="tag-atr-{{ $report->id }}" data-reportid="{{ $report->getTag->id }}">
                                             {{ $report->getTag->tagDescription }}
                                         </td>
                                         <td>
@@ -183,11 +190,22 @@
                                         <td>
                                             <div class="btn-group" role="group" aria-label="Basic mixed styles example">
                                                 <button id="del-{{ $report->id }}" type="button" class="btn btn-primary btn-sm">Apagar</button>
-                                                <button id="atr-{{ $report->id }}" type="button" class="btn btn-primary btn-sm" data-tagAtr="{{ $report->getTag->id }}">Atribuir</button>
+                                                <button id="atr-{{ $report->id }}" type="button" class="btn btn-primary btn-sm" data-tagAtr="{{ $report->getTag->id }}" data-repId="{{ $report->id }}" onclick="getOption(id)">Atribuir</button>
                                             </div>
                                         </td>
                                         @else
-                                        <td contenteditable="true" id="tag-{{ $report->id }}" data-reportid="{{ $report->id }}">
+                                        <td>
+                                            <form id="form-atr-{{ $report->id }}" action="/tec/{{ $report->id }}" method="post">
+                                                @csrf
+                                                @method('PUT')
+                                                <select id="tag-{{ $report->id }}-edit" name="tagName">
+                                                    @foreach($tecTagger as $tag)
+                                                        <option value="{{$tag->id}}">{{$tag->tagDescription}}</option>
+                                                    @endforeach
+                                                </select>
+                                            </form>
+                                        </td>
+                                        <td id="tag-atr-{{ $report->id }}" data-reportid="{{ $report->id }}">
                                             -
                                         </td>
                                         <td>
@@ -196,7 +214,7 @@
                                         <td>
                                             <div class="btn-group" role="group" aria-label="Basic mixed styles example">
                                                 <button id="del-{{ $report->id }}" type="button" class="btn btn-primary btn-sm">Apagar</button>
-                                                <button id="atr-{{ $report->id }}" type="button" class="btn btn-primary btn-sm" data-tagAtr="-">Atribuir</button> 
+                                                <button id="atr-{{ $report->id }}" type="button" class="btn btn-primary btn-sm" data-tagAtr="-" data-repId="{{ $report->id }}" onclick="getOption(id)">Atribuir</button>
                                             </div>
                                         </td>
                                         @endif
@@ -259,13 +277,13 @@
                                         <td></td>
                                         <td></td>
                                         <td></td>
-                                    
-                                    <td>
-                                        <div class="btn-group" role="group" aria-label="Basic mixed styles example">
-                                            <button type="button" class="btn btn-primary btn-sm">Apagar</button>
-                                            <button type="button" class="btn btn-primary btn-sm">Editar</button>
-                                             <button type="button" class="btn btn-primary btn-sm">Atualizar</button>
-                                        </div>
+
+                                        <td>
+                                            <div class="btn-group" role="group" aria-label="Basic mixed styles example">
+                                                <button type="button" class="btn btn-primary btn-sm">Apagar</button>
+                                                <button type="button" class="btn btn-primary btn-sm">Editar</button>
+                                                <button type="button" class="btn btn-primary btn-sm">Atualizar</button>
+                                            </div>
                                         </td>
                                     </tr>
                                     <tr>
@@ -273,40 +291,40 @@
                                         <td></td>
                                         <td></td>
                                         <td></td>
-                                    
-                                    <td>
-                                        <div class="btn-group" role="group" aria-label="Basic mixed styles example">
-                                            <button type="button" class="btn btn-primary btn-sm">Apagar</button>
-                                            <button type="button" class="btn btn-primary btn-sm">Editar</button>
-                                             <button type="button" class="btn btn-primary btn-sm">Atualizar</button>
-                                        </div>
+
+                                        <td>
+                                            <div class="btn-group" role="group" aria-label="Basic mixed styles example">
+                                                <button type="button" class="btn btn-primary btn-sm">Apagar</button>
+                                                <button type="button" class="btn btn-primary btn-sm">Editar</button>
+                                                <button type="button" class="btn btn-primary btn-sm">Atualizar</button>
+                                            </div>
                                         </td>
                                     </tr>
                                     <tr>
                                         <th scope="row">3</th>
                                         <td></td>
-                                    <td></td>
-                                    <td></td>
-                                    <td>
-                                        <div class="btn-group" role="group" aria-label="Basic mixed styles example">
-                                            <button type="button" class="btn btn-primary btn-sm">Apagar</button>
-                                            <button type="button" class="btn btn-primary btn-sm">Editar</button>
-                                             <button type="button" class="btn btn-primary btn-sm">Atualizar</button>
-                                        </div>
+                                        <td></td>
+                                        <td></td>
+                                        <td>
+                                            <div class="btn-group" role="group" aria-label="Basic mixed styles example">
+                                                <button type="button" class="btn btn-primary btn-sm">Apagar</button>
+                                                <button type="button" class="btn btn-primary btn-sm">Editar</button>
+                                                <button type="button" class="btn btn-primary btn-sm">Atualizar</button>
+                                            </div>
                                         </td>
                                     </tr>
                                 </tbody>
                             </table>
-                     </div>
-                               
-                            
-                                <div>
+                        </div>
+
+
+                        <div>
                             <button class="btn btn-primary" data-bs-dismiss="modal">
                                 <i class="fas fa-xmark fa-fw"></i>
                                 Fechar
                             </button>
                         </div>
-                    
+
                     </div>
                 </div>
             </div>
@@ -343,7 +361,7 @@
                                         <th scope="col">Nome</th>
                                         <th scope="col">Tag</th>
                                         <th scope="col">Estado</th>
-                                    <th scope="col"> <i class="fas fa-tools"></i></th>
+                                        <th scope="col"> <i class="fas fa-tools"></i></th>
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -352,12 +370,12 @@
                                         <td></td>
                                         <td></td>
                                         <td></td>
-                                    <td>
-                                        <div class="btn-group" role="group" aria-label="Basic mixed styles example">
-                                            <button type="button" class="btn btn-primary btn-sm">Apagar</button>
-                                            <button type="button" class="btn btn-primary btn-sm">Editar</button>
-                                             <button type="button" class="btn btn-primary btn-sm">Atribuir</button>
-                                        </div>
+                                        <td>
+                                            <div class="btn-group" role="group" aria-label="Basic mixed styles example">
+                                                <button type="button" class="btn btn-primary btn-sm">Apagar</button>
+                                                <button type="button" class="btn btn-primary btn-sm">Editar</button>
+                                                <button type="button" class="btn btn-primary btn-sm">Atribuir</button>
+                                            </div>
                                         </td>
                                     </tr>
                                     <tr>
@@ -365,37 +383,37 @@
                                         <td></td>
                                         <td></td>
                                         <td></td>
-                                    <td>
-                                        <div class="btn-group" role="group" aria-label="Basic mixed styles example">
-                                            <button type="button" class="btn btn-primary btn-sm">Apagar</button>
-                                            <button type="button" class="btn btn-primary btn-sm">Editar</button>
-                                             <button type="button" class="btn btn-primary btn-sm">Atribuir</button>
-                                        </div>
+                                        <td>
+                                            <div class="btn-group" role="group" aria-label="Basic mixed styles example">
+                                                <button type="button" class="btn btn-primary btn-sm">Apagar</button>
+                                                <button type="button" class="btn btn-primary btn-sm">Editar</button>
+                                                <button type="button" class="btn btn-primary btn-sm">Atribuir</button>
+                                            </div>
                                         </td>
                                     </tr>
                                     <tr>
                                         <th scope="row">3</th>
                                         <td colspan="2"></td>
                                         <td></td>
-                                    <td>
-                                        <div class="btn-group" role="group" aria-label="Basic mixed styles example">
-                                            <button type="button" class="btn btn-primary btn-sm">Apagar</button>
-                                            <button type="button" class="btn btn-primary btn-sm">Editar</button>
-                                             <button type="button" class="btn btn-primary btn-sm">Atribuir</button>
-                                        </div>
+                                        <td>
+                                            <div class="btn-group" role="group" aria-label="Basic mixed styles example">
+                                                <button type="button" class="btn btn-primary btn-sm">Apagar</button>
+                                                <button type="button" class="btn btn-primary btn-sm">Editar</button>
+                                                <button type="button" class="btn btn-primary btn-sm">Atribuir</button>
+                                            </div>
                                         </td>
                                     </tr>
                                 </tbody>
                             </table>
                         </div>
 
-                                <div>
+                        <div>
                             <button class="btn btn-primary" data-bs-dismiss="modal">
                                 <i class="fas fa-xmark fa-fw"></i>
                                 Fechar
                             </button>
                         </div>
-                        
+
                     </div>
                 </div>
             </div>
@@ -431,7 +449,7 @@
                                         <th scope="col">Nome</th>
                                         <th scope="col">Tag</th>
                                         <th scope="col">Tipo de erro</th>
-                                    <th scope="col"> <i class="fas fa-tools"></i></th>
+                                        <th scope="col"> <i class="fas fa-tools"></i></th>
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -440,10 +458,10 @@
                                         <td></td>
                                         <td></td>
                                         <td></td>
-                                    <td>
-                                        <div class="btn-group" role="group" aria-label="Basic mixed styles example">
-                                            <button type="button" class="btn btn-danger btn-sm">Apagar</button>                                       
-                                        </div>
+                                        <td>
+                                            <div class="btn-group" role="group" aria-label="Basic mixed styles example">
+                                                <button type="button" class="btn btn-danger btn-sm">Apagar</button>
+                                            </div>
                                         </td>
                                     </tr>
                                     <tr>
@@ -451,10 +469,10 @@
                                         <td></td>
                                         <td></td>
                                         <td></td>
-                                    <td>
-                                        <div class="btn-group" role="group" aria-label="Basic mixed styles example">
-                                            <button type="button" class="btn btn-danger btn-sm">Apagar</button>                                       
-                                        </div>
+                                        <td>
+                                            <div class="btn-group" role="group" aria-label="Basic mixed styles example">
+                                                <button type="button" class="btn btn-danger btn-sm">Apagar</button>
+                                            </div>
                                         </td>
                                     </tr>
                                     <tr>
@@ -464,9 +482,9 @@
                                         <td></td>
                                         <td>
 
-                                        <div class="btn-group" role="group" aria-label="Basic mixed styles example">
-                                            <button type="button" class="btn btn-danger btn-sm">Apagar</button>                                       
-                                        </div>
+                                            <div class="btn-group" role="group" aria-label="Basic mixed styles example">
+                                                <button type="button" class="btn btn-danger btn-sm">Apagar</button>
+                                            </div>
                                         </td>
                                     </tr>
                                 </tbody>
@@ -513,4 +531,26 @@
 
 </body>
 
+@endsection
+
+@section('scripts')
+<script type="text/javascript">
+    function getOption(id) {
+
+
+        //Obter o valor da opção
+        let text1 = id;
+        let result = text1.concat("tag-", id);
+        selectElement = document.querySelector("select");
+        output = selectElement.value;
+        outputSelected = selectElement.options[selectElement.selectedIndex].innerHTML
+        tdSelected = document.getElementById(result);
+        console.log(tdSelected)
+
+
+        let form = document.getElementById("form-"+id);
+        form.submit();
+
+    }
+</script>
 @endsection

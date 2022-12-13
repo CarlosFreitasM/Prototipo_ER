@@ -14,8 +14,7 @@ class TagController extends Controller
      */
     public function index()
     {
-        $tags = Tag::all();
-        return view('pages.dashboardTecnico', ['tecTags'=>$tags]);
+       
     }
 
     /**
@@ -25,7 +24,7 @@ class TagController extends Controller
      */
     public function create()
     {
-        return view('pages.createReport');
+
     }
 
     /**
@@ -58,7 +57,6 @@ class TagController extends Controller
      */
     public function edit($id)
     {
-        $reports = Tag::findOrFail($id);
         
     }
 

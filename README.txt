@@ -19,8 +19,8 @@ NOTA IMPORTANTE: CADA VEZ QUE FOR INSTALADO ALGO PARA O VS CODE É PRECISO FECHA
 7 - Copiar o que está no ficheiro .env.example para o .env 
 8 - No ficheiro .env devem colocar a DB_Password como:
 Malha1@+
-9 - Fazer php artisan serve
-10 - Para fazer o refresh automatico, abrem outro terminal como Git e fazem 
+9 - Fazer php artisan serve, no terminal git bash
+10 - Para fazer o refresh automatico, abrem outro terminal como Git Bash e fazem 
 cd ER_Prototipo/Backend
 Seguido de:
 npm run dev

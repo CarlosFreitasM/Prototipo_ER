@@ -522,12 +522,12 @@
                                         @endif
                                 </tbody>
                             </table>
-
+                            <!--
                             <div class="btn-group" role="group" aria-label="Basic mixed styles example">
                                 <button type="button" class="btn btn-danger">Apagar</button>
                                 <button type="button" class="btn btn-warning">Editar</button>
                                 <button type="button" class="btn btn-success">Atualizar</button>
-                            </div>
+                            </div> -->
                             <div> <br> </div>
                             <div>
                                 <button class="btn btn-primary" data-bs-dismiss="modal">
@@ -616,12 +616,12 @@
                                     @endforeach
                                 </tbody>
                             </table>
-
+                            <!--
                             <div class="btn-group" role="group" aria-label="Basic mixed styles example">
                                 <button type="button" class="btn btn-danger">Apagar</button>
                                 <button type="button" class="btn btn-warning">Editar</button>
                                 <button type="button" class="btn btn-success">Contactar</button>
-                            </div>
+                            </div> -->
                             <div> <br> </div>
                             <div>
                                 <button class="btn btn-primary" data-bs-dismiss="modal">
@@ -694,6 +694,7 @@
                                 <button type="button" class="btn btn-warning">Editar</button>
                                 <button type="button" class="btn btn-success">Guardar</button>
                             </div>
+                            
                             <div> <br> </div>
                             <div>
                                 <button class="btn btn-primary" data-bs-dismiss="modal">

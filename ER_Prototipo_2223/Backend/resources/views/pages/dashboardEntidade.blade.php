@@ -259,7 +259,7 @@
                                         @foreach($entReports as $report)
                                         @if(isset($report->getTag->tagDescription) && isset($report->getState->stateDescription))
                                         @if($report->getTag->tagDescription=="Phising")
-                                        <tr>
+                                    <tr>
                                         <td>
                                             {{ $report->id }}
                                         </td>
@@ -388,10 +388,10 @@
                                         @endif
                                         @endforeach
                                         @elseif(Request::url()== "http://127.0.0.1:8000/entpharming")
-                                            @foreach($entReports as $report)
+                                        @foreach($entReports as $report)
                                         @if(isset($report->getTag->tagDescription) && isset($report->getState->stateDescription))
                                         @if($report->getTag->tagDescription=="Pharming")
-                                        <tr>
+                                    <tr>
                                         <td>
                                             {{ $report->id }}
                                         </td>
@@ -663,29 +663,178 @@
                                     <tr>
                                         <th scope="col">#</th>
                                         <th scope="col">Nome</th>
+                                        <th scope="col">Descrição</th>
                                         <th scope="col">Tag</th>
-                                        <th scope="col">Data de Adição</th>
+                                        <th scope="col">Data e hora</th>
                                     </tr>
                                 </thead>
                                 <tbody>
+                                    @if(Request::url()== "http://127.0.0.1:8000/ent")
+
+                                    @foreach($entReports as $report)
                                     <tr>
-                                        <th scope="row">1</th>
-                                        <td></td>
-                                        <td></td>
-                                        <td></td>
-                                    </tr>
+                                        <td>
+                                            {{ $report->id }}
+                                        </td>
+                                        <td>
+                                            {{ $report->fullname_cliente }}
+                                        </td>
+                                        <td>
+                                            {{ $report->description }}
+                                        </td>
+                                        @if(isset($report->getTag->tagDescription) && isset($report->getState->stateDescription))
+                                        <td>
+                                            {{ $report->getTag->tagDescription }}
+                                        </td>
+                                        <td>
+                                            {{ $report->created_at }}
+                                        </td>
+
+                                        @elseif(isset($report->getTag->tagDescription))
+                                        <td>
+                                            {{ $report->getTag->tagDescription }}
+                                        </td>
+                                        <td>
+                                            {{ $report->created_at }}
+                                        </td>
+
+                                        @else
+                                        <td>
+                                            -
+                                        </td>
+                                        <td>
+                                            {{ $report->created_at }}
+                                        </td>
+
+                                        @endif
+                                        @endforeach
+                                        @elseif(Request::url()== "http://127.0.0.1:8000/entphishing")
+                                        @foreach($entReports as $report)
+                                        @if(isset($report->getTag->tagDescription) && isset($report->getState->stateDescription))
+                                        @if($report->getTag->tagDescription=="Phising")
                                     <tr>
-                                        <th scope="row">2</th>
-                                        <td></td>
-                                        <td></td>
-                                        <td></td>
-                                    </tr>
+                                        <td>
+                                            {{ $report->id }}
+                                        </td>
+                                        <td>
+                                            {{ $report->fullname_cliente }}
+                                        </td>
+                                        <td>
+                                            {{ $report->description }}
+                                        </td>
+                                        <td>
+                                            {{ $report->getTag->tagDescription }}
+                                        </td>
+                                        <td>
+                                            {{ $report->created_at }}
+                                        </td>
+
+                                        @endif
+                                        @elseif(isset($report->getTag->tagDescription))
+                                        @if($report->getTag->tagDescription=="Phising")
                                     <tr>
-                                        <th scope="row">3</th>
-                                        <td></td>
-                                        <td></td>
-                                        <td></td>
-                                    </tr>
+                                        <td>
+                                            {{ $report->id }}
+                                        </td>
+                                        <td>
+                                            {{ $report->fullname_cliente }}
+                                        </td>
+                                        <td>
+                                            {{ $report->description }}
+                                        </td>
+                                        <td>
+                                            {{ $report->getTag->tagDescription }}
+                                        </td>
+                                        <td>
+                                            {{ $report->created_at }}
+                                        </td>
+
+                                        @endif
+                                        @else
+                                    <tr>
+                                        <td>
+                                            {{ $report->id }}
+                                        </td>
+                                        <td>
+                                            {{ $report->fullname_cliente }}
+                                        </td>
+                                        <td>
+                                            {{ $report->description }}
+                                        </td>
+                                        <td>
+                                            -
+                                        </td>
+                                        <td>
+                                            {{ $report->created_at }}
+                                        </td>
+
+                                        @endif
+                                        @endforeach
+                                        @elseif(Request::url()== "http://127.0.0.1:8000/entpharming")
+                                        @foreach($entReports as $report)
+                                        @if(isset($report->getTag->tagDescription) && isset($report->getState->stateDescription))
+                                        @if($report->getTag->tagDescription=="Pharming")
+                                    <tr>
+                                        <td>
+                                            {{ $report->id }}
+                                        </td>
+                                        <td>
+                                            {{ $report->fullname_cliente }}
+                                        </td>
+                                        <td>
+                                            {{ $report->description }}
+                                        </td>
+                                        <td>
+                                            {{ $report->getTag->tagDescription }}
+                                        </td>
+                                        <td>
+                                            {{ $report->created_at }}
+                                        </td>
+
+
+                                        @endif
+                                        @elseif(isset($report->getTag->tagDescription))
+                                        @if($report->getTag->tagDescription=="Pharming")
+                                    <tr>
+                                        <td>
+                                            {{ $report->id }}
+                                        </td>
+                                        <td>
+                                            {{ $report->fullname_cliente }}
+                                        </td>
+                                        <td>
+                                            {{ $report->description }}
+                                        </td>
+                                        <td>
+                                            {{ $report->getTag->tagDescription }}
+                                        </td>
+                                        <td>
+                                            {{ $report->created_at }}
+                                        </td>
+
+
+
+                                        @endif
+                                        @else
+                                    <tr>
+                                        <td>
+                                            {{ $report->id }}
+                                        </td>
+                                        <td>
+                                            {{ $report->fullname_cliente }}
+                                        </td>
+                                        <td>
+                                            {{ $report->description }}
+                                        </td>
+                                        <td>
+                                            -
+                                        </td>
+                                        <td>
+                                            {{ $report->created_at }}
+                                        </td>
+                                        @endif
+                                        @endforeach
+                                        @endif
                                 </tbody>
                             </table>
 
@@ -694,7 +843,7 @@
                                 <button type="button" class="btn btn-warning">Editar</button>
                                 <button type="button" class="btn btn-success">Guardar</button>
                             </div>
-                            
+
                             <div> <br> </div>
                             <div>
                                 <button class="btn btn-primary" data-bs-dismiss="modal">
@@ -724,7 +873,7 @@
         outputSelected = selectElement.options[selectElement.selectedIndex].innerHTML
         tdSelected = document.getElementById(result);
 
-        let form = document.getElementById("form-"+id);
+        let form = document.getElementById("form-" + id);
         form.submit();
 
     }

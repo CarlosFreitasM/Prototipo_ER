@@ -94,39 +94,39 @@
 </section>
 
 <section class="page-section" id="introduzir">
-            <div class="container">
-                <!-- Contact Section Heading-->
-                <h2 class="page-section-heading text-center text-uppercase text-secondary mb-0">Introduzir entidade competente</h2>
-                <!-- Icon Divider-->
-                <div class="divider-custom">
-                    <div class="divider-custom-line"></div>
-                    <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
-                    <div class="divider-custom-line"></div>
-                </div>
-                @if (session('erroreg'))
-                    <div class="alert alert-danger" role="alert">
-                        {{ session('erroreg') }}
-                    </div>
-                @endif
-                <!-- Contact Section Form-->
-                <div class="row justify-content-center">
-                    <div>
-                        <form action="/addEntity" method="post" > 
-                            @csrf
-                            <input class="form-control" type="text" name="entName" placeholder="Nome da entidade" required><br>
-                            <label for="regName">Tags</label>
-                            <select class="form-control" id="regTag" name="regTag" required><br>
-                                <option value=""></option>
-                                @foreach($tecTagger as $tagReg)
-                                    <option value="{{ $tagReg->id }}">{{$tagReg->tagDescription}}</option>
-                                @endforeach
-                            <input class="form-control" type="hidden" name="state" value="1"><br>
-                            <input class="btn btn-primary btn-xl" type="submit" name="register" value="Registar"><br>
+    <div class="container">
+        <!-- Contact Section Heading-->
+        <h2 class="page-section-heading text-center text-uppercase text-secondary mb-0">Introduzir entidade competente</h2>
+        <!-- Icon Divider-->
+        <div class="divider-custom">
+            <div class="divider-custom-line"></div>
+            <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
+            <div class="divider-custom-line"></div>
+        </div>
+        @if (session('erroreg'))
+        <div class="alert alert-danger" role="alert">
+            {{ session('erroreg') }}
+        </div>
+        @endif
+        <!-- Contact Section Form-->
+        <div class="row justify-content-center">
+            <div>
+                <form action="/addEntity" method="post">
+                    @csrf
+                    <input class="form-control" type="text" name="entName" placeholder="Nome da entidade" required><br>
+                    <label for="regName">Tags</label>
+                    <select class="form-control" id="regTag" name="regTag" required><br>
+                        <option value=""></option>
+                        @foreach($tecTagger as $tagReg)
+                        <option value="{{ $tagReg->id }}">{{$tagReg->tagDescription}}</option>
+                        @endforeach
+                        <input class="form-control" type="hidden" name="state" value="1"><br>
+                        <input class="btn btn-primary btn-xl" type="submit" name="register" value="Registar"><br>
 
-                        </form>
-                    </div>
-                </div>
+                </form>
             </div>
+        </div>
+    </div>
 </section>
 <!--Footer -->
 <footer class="footer text-center">
@@ -237,9 +237,9 @@
                                                 @method('PUT')
                                                 <select id="tag-{{ $report->id }}-edit" name="tagName">
                                                     @foreach($tecTagger as $tag)
-                                                        <option value="{{$tag->id}}">{{$tag->tagDescription}}</option>
+                                                    <option value="{{$tag->id}}">{{$tag->tagDescription}}</option>
                                                     @endforeach
-                                                        <option value="erro">Burla facebook</option>
+                                                    <option value="erro">Burla facebook</option>
                                                 </select>
                                             </form>
                                         </td>
@@ -304,53 +304,31 @@
                                         <th scope="col">#</th>
                                         <th scope="col">Nome</th>
                                         <th scope="col">Tag</th>
-                                        <th scope="col">Contacto</th>
                                         <th scope="col"> <i class="fas fa-tools"></i></th>
 
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    <tr>
-                                        <th scope="row">1</th>
-                                        <td></td>
-                                        <td></td>
-                                        <td></td>
+                                    @foreach($tecAdd as $entity)
+                                    <td>
+                                        {{ $entity->id }}
+                                    </td>
+                                    <td>
+                                        {{ $entity->entityName }}
+                                    </td>
+                                    <td>
+                                        {{ $entity->getTag->tagDescription }}
+                                    </td>
 
-                                        <td>
-                                            <div class="btn-group" role="group" aria-label="Basic mixed styles example">
-                                                <button type="button" class="btn btn-primary btn-sm">Apagar</button>
-                                                <button type="button" class="btn btn-primary btn-sm">Editar</button>
-                                                <button type="button" class="btn btn-primary btn-sm">Atualizar</button>
-                                            </div>
-                                        </td>
+                                    <td>
+                                        <div class="btn-group" role="group" aria-label="Basic mixed styles example">
+                                            <button type="button" class="btn btn-primary btn-sm">Apagar</button>
+                                            <button type="button" class="btn btn-primary btn-sm">Editar</button>
+                                            <button type="button" class="btn btn-primary btn-sm">Atualizar</button>
+                                        </div>
+                                    </td>
                                     </tr>
-                                    <tr>
-                                        <th scope="row">2</th>
-                                        <td></td>
-                                        <td></td>
-                                        <td></td>
-
-                                        <td>
-                                            <div class="btn-group" role="group" aria-label="Basic mixed styles example">
-                                                <button type="button" class="btn btn-primary btn-sm">Apagar</button>
-                                                <button type="button" class="btn btn-primary btn-sm">Editar</button>
-                                                <button type="button" class="btn btn-primary btn-sm">Atualizar</button>
-                                            </div>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <th scope="row">3</th>
-                                        <td></td>
-                                        <td></td>
-                                        <td></td>
-                                        <td>
-                                            <div class="btn-group" role="group" aria-label="Basic mixed styles example">
-                                                <button type="button" class="btn btn-primary btn-sm">Apagar</button>
-                                                <button type="button" class="btn btn-primary btn-sm">Editar</button>
-                                                <button type="button" class="btn btn-primary btn-sm">Atualizar</button>
-                                            </div>
-                                        </td>
-                                    </tr>
+                                    @endforeach
                                 </tbody>
                             </table>
                         </div>
@@ -553,7 +531,7 @@
     function getOption(id) {
 
 
-        
+
     }
 </script>
 @endsection

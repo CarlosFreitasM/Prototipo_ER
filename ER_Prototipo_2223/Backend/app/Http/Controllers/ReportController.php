@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Models\Report;
 use App\Models\Tag;
 use App\Models\State;
+use App\Models\Entity;
 
 class ReportController extends Controller
 {
@@ -18,7 +19,8 @@ class ReportController extends Controller
     {
         $reports = Report::all();
         $tags = Tag::all();
-        return view('pages.dashboardTecnico', ['tecReports'=>$reports, 'tecTagger'=>$tags]);
+        $entity = Entity::all();
+        return view('pages.dashboardTecnico', ['tecReports'=>$reports, 'tecTagger'=>$tags, 'tecAdd'=>$entity]);
     }
 
     public function indexin()
@@ -65,6 +67,23 @@ class ReportController extends Controller
         return redirect('/')->with('mensagem','Reporte criado');
     }
 
+    public function storeent(Request $request)
+    {
+        
+        $name= $request["entName"];
+        if(Entity::where('entityName', '=', $name)->exists()) {
+            return redirect('/tec')->with('erroreg','Tag atribuida não existe na base de dados');
+         }
+        else{
+            $registertag=$request["regTag"];
+            $entity=new Entity();
+            $entity->entityName = $name;
+            $entity->tag = $registertag;
+            $entity->save();
+            return redirect('/tec')->with('mensagem','Entidade criada');
+        }
+    }
+
     /**
      * Display the specified resource.
      *
@@ -99,9 +118,16 @@ class ReportController extends Controller
     {
         $reports = Report::findOrFail($id);
         $tagname = $request["tagName"];
-        $reports->tag = $tagname;
-        $reports->update();
-        return redirect('/tec')->with('mensagem','Tag atribuida com sucesso');
+        if($tagname=="erro"){
+            
+            return redirect('/tec')->with('erro','Tag atribuida não existe na base de dados');
+        }
+        else{
+            $reports->tag = $tagname;
+            $reports->update();
+            return redirect('/tec')->with('mensagem','Tag atribuida com sucesso');
+      
+        }
     }
 
     public function updateent(Request $request, $id)

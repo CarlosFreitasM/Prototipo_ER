@@ -6,18 +6,28 @@ const buttonPressed = e => {
 for(let button of buttons){
     button.addEventListener("click", buttonPressed);
     button.addEventListener('click', (e) => {
-        if(e.target.id=="#tag-"+e.target.dataset.repid){
-            console.log(e.target.id)
+        
+        if(e.target.id=="atr-"+e.target.dataset.repid){
+            
             const selectElement = document.querySelector("#tag-"+e.target.dataset.repid+"-edit");
 
             const tempor = document.querySelector("#tag-atr-"+e.target.dataset.repid);
+            const output = selectElement.value;
 
-            console.log(tempor.innerHTML)
-            console.log(outputSelected)
+            if(output=="erro"){
+                alert("Esta tag não existe na base de dados!")
+            }
+            else{
 
-            tempor.innerHTML = selectElement.options[selectElement.selectedIndex].innerHTML
+                tempor.innerHTML = selectElement.options[selectElement.selectedIndex].innerHTML
+                let form = document.getElementById("form-atr-"+e.target.dataset.repid);
+                form.submit();  
+            }
         }
-        else if(e.target.id="#bur-"+e.target.dataset.repid){
+        else if(e.target.id=="bur-"+e.target.dataset.repid){
+
+        }
+        else if(e.target.id=="bur-"+e.target.dataset.repid){
             console.log(e.target.id)
             const selectElementEnt = document.querySelector("#state-"+e.target.dataset.repid+"-edit");
             let outputEnt = selectElementEnt.value;

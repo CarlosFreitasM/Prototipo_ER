@@ -92,6 +92,42 @@
         </div>
     </div>
 </section>
+
+<section class="page-section" id="introduzir">
+            <div class="container">
+                <!-- Contact Section Heading-->
+                <h2 class="page-section-heading text-center text-uppercase text-secondary mb-0">Introduzir entidade competente</h2>
+                <!-- Icon Divider-->
+                <div class="divider-custom">
+                    <div class="divider-custom-line"></div>
+                    <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
+                    <div class="divider-custom-line"></div>
+                </div>
+                @if (session('erroreg'))
+                    <div class="alert alert-danger" role="alert">
+                        {{ session('erroreg') }}
+                    </div>
+                @endif
+                <!-- Contact Section Form-->
+                <div class="row justify-content-center">
+                    <div>
+                        <form action="/addEntity" method="post" > 
+                            @csrf
+                            <input class="form-control" type="text" name="entName" placeholder="Nome da entidade" required><br>
+                            <label for="regName">Tags</label>
+                            <select class="form-control" id="regTag" name="regTag" required><br>
+                                <option value=""></option>
+                                @foreach($tecTagger as $tagReg)
+                                    <option value="{{ $tagReg->id }}">{{$tagReg->tagDescription}}</option>
+                                @endforeach
+                            <input class="form-control" type="hidden" name="state" value="1"><br>
+                            <input class="btn btn-primary btn-xl" type="submit" name="register" value="Registar"><br>
+
+                        </form>
+                    </div>
+                </div>
+            </div>
+</section>
 <!--Footer -->
 <footer class="footer text-center">
     <div class="container">
@@ -178,6 +214,7 @@
                                                     @foreach($tecTagger as $tag)
                                                     <option value="{{$tag->id}}">{{$tag->tagDescription}}</option>
                                                     @endforeach
+                                                    <option value="erro">Burla facebook</option>
                                                 </select>
                                             </form>
                                         </td>
@@ -202,6 +239,7 @@
                                                     @foreach($tecTagger as $tag)
                                                         <option value="{{$tag->id}}">{{$tag->tagDescription}}</option>
                                                     @endforeach
+                                                        <option value="erro">Burla facebook</option>
                                                 </select>
                                             </form>
                                         </td>
@@ -504,29 +542,6 @@
     </div>
 </div>
 
-<div class="portfolio-modal modal fade" id="edit-1" tabindex="-1" aria-labelledby="edit-1" aria-hidden="true">
-    <div class="modal-dialog modal-xl">
-        <div class="modal-content">
-            <div class="modal-header border-0"><button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button></div>
-            <div class="modal-body text-center pb-5">
-                <div class="container">
-                    <div class="row justify-content-center">
-                        <div class="col-lg-8">
-                            <!-- Portfolio Modal - Title-->
-                            <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0">Formulário:</h2>
-                        </div>
-                        <div>
-                            <button class="btn btn-primary" data-bs-dismiss="modal">
-                                <i class="fas fa-xmark fa-fw"></i>
-                                Fechar
-                            </button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
 
 
 </body>
@@ -538,19 +553,7 @@
     function getOption(id) {
 
 
-        //Obter o valor da opção
-        let text1 = id;
-        let result = text1.concat("tag-", id);
-        selectElement = document.querySelector("select");
-        output = selectElement.value;
-        outputSelected = selectElement.options[selectElement.selectedIndex].innerHTML
-        tdSelected = document.getElementById(result);
-        console.log(tdSelected)
-
-
-        let form = document.getElementById("form-"+id);
-        form.submit();
-
+        
     }
 </script>
 @endsection

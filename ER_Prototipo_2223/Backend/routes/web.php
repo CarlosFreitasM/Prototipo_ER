@@ -35,6 +35,8 @@ Route::get('/', [MainController::class,'index'])->name('tecTags');
 
 Route::get('/tec', [ReportController::class,'index'])->name('tecReports');
 
+Route::post('/addEntity', [ReportController::class, 'storeent']);
+
 Route::put('/tec/{id}', [ReportController::class,'update'])->name('tecTagsupdate');
 
 Route::get('/ent', [ReportController::class,'indexin'])->name('entReports');
